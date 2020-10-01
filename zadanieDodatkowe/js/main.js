@@ -1,10 +1,14 @@
 const button = document.querySelector('button');
-const ul = document.querySelector('ul');
-
-button.addEventListener('click', function () {
+button.addEventListener('click', function (event) {
+  event.preventDefault();
+  const ul = document.querySelector('ul');
   const li = document.createElement('li');
   li.textContent = 'Item';
   ul.appendChild(li);
+  let allLi = document.getElementsByTagName('li');
+  console.log(allLi);
+  for (let i = 0; i < allLi.length; i++) {
+    allLi[i].style.backgroundColor = 'red';
+    allLi[i].style.marginLeft = 10 * i + 'px';
+  }
 });
-
-/* Nie wiem jak napisac kod js's, zeby po kliknieciu, kazdy nastepny stworzony element mial margin-left zwiekszony o 10px */
