@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkblue;
+  color: white;
+  font-size: 18px;
+}
+
+button {
+  background-color: darkorange;
+  padding: 10px 15px;
+  margin: 20px auto 20px 15px;
+}
+
+.red {
+  color: red;
+  margin: 20px auto 20px 15px;
+}
