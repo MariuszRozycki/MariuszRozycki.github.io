@@ -24,6 +24,7 @@ body {
   grid-template-columns: repeat(5, 80px);
   grid-template-rows: minmax(120px, auto) repeat(5, 80px);
   min-height: 70%;
+  color: white;
 }
 
 .result {
@@ -54,6 +55,7 @@ button {
   border: 1px solid rgba(0, 0, 0, 0.75);
   background-color: #242423;
   outline: none;
+  color: white;
 }
 
 button:hover,
