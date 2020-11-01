@@ -40,13 +40,13 @@ body {
   word-break: break-all;
 }
 
-.action-before {
+.result-before {
   font-size: 16px;
   font-weight: 400;
   color: rgba(255, 255, 255, .8);
 }
 
-.action-actually {
+.result-actually {
   font-size: 30px;
 }
 
@@ -69,4 +69,16 @@ button:focus {
 
 .row-2 {
   grid-row: span 2;
+}
+
+@media (max-width: 400px) {
+  .calculator {
+    grid-template-columns: repeat(5, 70px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 70px);
+  }
+
+  button {
+    color: #fff;
+    font-size: 22px;
+  }
 }
