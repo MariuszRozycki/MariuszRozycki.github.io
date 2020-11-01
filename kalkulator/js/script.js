@@ -60,7 +60,7 @@ const calculate = () => {
       action = before / 100 * actually;
       break;
 
-    case '√':
+    case '^':
       action = Math.pow(before, actually);
       break;
 
