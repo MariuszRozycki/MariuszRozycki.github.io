@@ -71,7 +71,7 @@ button:focus {
   grid-row: span 2;
 }
 
-@media (max-width: 400px) {
+@media(max-width: 400px) {
   .calculator {
     grid-template-columns: repeat(5, 70px);
     grid-template-rows: minmax(120px, auto) repeat(5, 70px);
@@ -79,7 +79,7 @@ button:focus {
 
   button {
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
   }
 }
