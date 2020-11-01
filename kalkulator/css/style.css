@@ -79,6 +79,7 @@ button:focus {
 
   button {
     color: #fff;
-    font-size: 22px;
+    font-size: 20px;
+    text-align: center;
   }
 }
