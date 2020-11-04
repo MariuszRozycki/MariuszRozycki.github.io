@@ -12,7 +12,7 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white position-fixed w-100">
     <div class="container">
       <a class="navbar-brand" href="#">Landing Page</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -22,20 +22,20 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Services <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#services">Services <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Showcase</a>
+            <a class="nav-link" href="#showcase">Showcase</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Team</a>
+            <a class="nav-link" href="#team">Team</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" style="padding-top: 56px;">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -157,13 +157,13 @@
   <section class="call-to-action">
     <div class="container text-white text-center">
       <h2 class="mb-5">Ready to get started? Sign up now!</h2>
-      <form class="w-75 mx-auto">
+      <form action="https://formspree.io/f/xzbkgywp" class="w-75 mx-auto" method="POST">
         <div class="form-row">
           <div class="col-md-9 mb-2">
-            <input type="email" class="form-control" placeholder="E-mail address">
+            <input type="email" name="_replyto" class="form-control" placeholder="E-mail address">
           </div>
           <div class="col-md-3 ">
-            <button type="submit" class="btn btn-block btn-primary">Submit</button>
+            <button type="submit" value="Send" class="btn btn-block btn-primary">Submit</button>
           </div>
         </div>
       </form>

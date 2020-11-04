@@ -1,16 +1,24 @@
+html {
+  scroll-behavior: smooth;
+}
+
 section,
 footer {
   padding: 60px 0;
 }
 
+.navbar {
+  z-index: 10;
+}
+
 .showcase-img {
   background-size: cover;
   background-position: center;
-  transition: .2s;
+  transition: .2s linear;
 }
 
 .showcase-img:hover {
-  transform: scale(1.2);
+  transform: scale(1.4);
 }
 
 .showcase-text {
