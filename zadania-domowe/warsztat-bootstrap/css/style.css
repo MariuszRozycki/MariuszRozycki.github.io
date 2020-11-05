@@ -1,11 +1,3 @@
-html {
-  scroll-behavior: smooth;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  -apple-webkit-overflow-scrolling: touch;
-  -apple-overflow-scrolling: touch;
-}
-
 section,
 footer {
   padding: 60px 0;
