@@ -1,0 +1,45 @@
+.wrapper-icon {
+  width: 150px;
+  height: 150px;
+  font-size: 100px;
+}
+
+h1 {
+  position: relative;
+}
+
+h1::after {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 10px auto;
+  display: block;
+  background-color: #6c757d;
+  width: 25%;
+  height: 1px;
+  content: '';
+}
+
+p,
+sub {
+  font-size: 22px;
+}
+
+.text-footer {
+  bottom: 0;
+  font-size: 14px;
+}
+
+footer {
+  margin-top: 200px;
+}
+
+.text-footer::before {
+  position: absolute;
+  margin: -10px auto;
+  display: block;
+  background-color: #6c757d;
+  width: 100%;
+  height: 0.1px;
+  content: '';
+}
