@@ -92,43 +92,7 @@ function init_map() {
     var_mapoptions);
 
   var_marker.setMap(var_map);
+
 }
-
-$('#main-slider').carousel({
-  interval: 7000 //changes the speed
-})
-
-$('#slider-testimonials').carousel({
-  interval: 4000 //changes the speed
-})
-
-//CountUp
-$('#counters-numbers').waypoint(function (direction) {
-
-  var NumberUp1 = new CountUp("NumberUp1", 0, 187);
-  var NumberUp2 = new CountUp("NumberUp2", 0, 589);
-  var NumberUp3 = new CountUp("NumberUp3", 0, 2456);
-  var NumberUp4 = new CountUp("NumberUp4", 0, 1112);
-  NumberUp1.start();
-  NumberUp2.start();
-  NumberUp3.start();
-  NumberUp4.start();
-}, {
-  triggerOnce: true,
-  offset: '90%'
-});
-
-//Progress
-$('#counters-progress').waypoint(function (direction) {
-  $(document).ready(function () {
-    $('#progress1').circliful();
-    $('#progress2').circliful();
-    $('#progress3').circliful();
-    $('#progress4').circliful();
-  });
-}, {
-  triggerOnce: true,
-  offset: '90%'
-});
 
 google.maps.event.addDomListener(window, 'load', init_map);
