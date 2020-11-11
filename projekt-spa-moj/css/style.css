@@ -272,7 +272,7 @@ header {
 .button-read-more {
   background-color: #1ba4ce;
   position: absolute;
-  top: 60%;
+  top: 58%;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 25px;
@@ -321,7 +321,7 @@ header {
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 400px) {
   .button {
     width: 120px;
     height: 45px;
@@ -344,6 +344,9 @@ header {
     height: 30px;
     margin-right: 5px;
   }
+  .header-logo-description {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 350px) {
@@ -363,6 +366,21 @@ header {
     width: 30px;
     height: 30px;
     margin-right: 5px;
+  }
+  .header-logo-description {
+    font-size: 12px;
+  }
+  .header-subtitle {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 320px) {
+  .header-logo-description {
+    font-size: 11px;
+  }
+  .button-read-more {
+    top: 75%;
   }
 }
 /*# sourceMappingURL=style.css.map */
