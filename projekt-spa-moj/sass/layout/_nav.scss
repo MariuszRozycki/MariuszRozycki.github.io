@@ -71,29 +71,7 @@
 }
 
 /* media */
-@media (max-width: 767px) {
 
-  .main-nav-list {
-    display: block;
-    position: absolute;
-    top: 25px;
-    right: 0;
-    width: 150px;
-    height: 220px;
-    background-color: $color-blue;
-    text-align: right;
-    box-shadow: $box-shadow-overlay;
-    z-index: 100;
-
-    li {
-      margin: 10px;
-
-      a {
-        color: #fff;
-      }
-    }
-  }
-}
 
 
 

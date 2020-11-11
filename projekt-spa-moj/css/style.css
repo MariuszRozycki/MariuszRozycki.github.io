@@ -167,27 +167,6 @@ body {
 }
 
 /* media */
-@media (max-width: 767px) {
-  .main-nav-list {
-    display: block;
-    position: absolute;
-    top: 25px;
-    right: 0;
-    width: 150px;
-    height: 220px;
-    background-color: #1ba4ce;
-    text-align: right;
-    box-shadow: 0 5px 20px #000;
-    z-index: 100;
-  }
-  .main-nav-list li {
-    margin: 10px;
-  }
-  .main-nav-list li a {
-    color: #fff;
-  }
-}
-
 header {
   padding-top: 150px;
   font-family: "Bellota", cursive;
@@ -247,8 +226,7 @@ header {
 .header-spalsh-logo-box {
   position: relative;
   width: 100%;
-  height: 500px;
-  min-height: 500px;
+  height: 800px;
 }
 
 .header-splash-logo {
@@ -294,10 +272,97 @@ header {
 .button-read-more {
   background-color: #1ba4ce;
   position: absolute;
-  top: 440px;
+  top: 60%;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 25px;
   text-transform: uppercase;
+}
+
+/* media */
+@media (max-width: 767px) {
+  .main-nav-list {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    width: 150px;
+    height: 220px;
+    background-color: #1ba4ce;
+    text-align: right;
+    box-shadow: 0 5px 20px #000;
+    z-index: 100;
+  }
+  .main-nav-list li {
+    margin: 10px;
+  }
+  .main-nav-list li a {
+    color: #fff;
+  }
+}
+
+@media (max-width: 500px) {
+  .button {
+    width: 130px;
+    height: 45px;
+    font-size: 14px;
+  }
+  .button-read-more {
+    top: 70%;
+  }
+  .video {
+    width: 170px;
+    font-size: 14px;
+  }
+  .video .video-play-circle {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 390px) {
+  .button {
+    width: 120px;
+    height: 45px;
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+  .button i {
+    padding-left: 5px;
+  }
+  .button-read-more {
+    top: 70%;
+  }
+  .video {
+    width: 170px;
+    font-size: 14px;
+    padding: 0;
+  }
+  .video .video-play-circle {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 350px) {
+  .button {
+    font-size: 11px;
+    padding: 5px;
+  }
+  .button-read-more {
+    top: 70%;
+  }
+  .video {
+    width: 170px;
+    font-size: 12px;
+    padding: 0;
+  }
+  .video .video-play-circle {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
