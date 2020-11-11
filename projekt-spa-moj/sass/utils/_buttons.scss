@@ -1,0 +1,33 @@
+/* buttons global */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: $font-size-main;
+  width: 155px;
+  height: 55px;
+  font-family: $font-button;
+
+  transition: $transition;
+
+  &:hover {
+    text-decoration: none;
+    color: $color-dark-gray;
+  }
+
+  i {
+    padding-left: 10px;
+    font-size: 12px;
+    width: 20px;
+  }
+}
+
+
+
+/* button header */
+.button-header-reserve {
+  background-color: $color-blue;
+  margin-right: 10px;
+}

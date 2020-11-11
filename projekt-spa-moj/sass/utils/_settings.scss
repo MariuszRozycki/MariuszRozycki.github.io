@@ -1,0 +1,41 @@
+/* fonts */
+
+// Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+$font-menu: 'Roboto',
+sans-serif;
+$font-footer: 'Roboto',
+sans-serif;
+$font-button: 'Roboto',
+sans-serif;
+
+
+// Bellota
+@import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+$font-main: 'Bellota',
+cursive;
+
+/* colors */
+$color-primary: #000;
+$color-blue: #1ba4ce;
+$color-violet: #473452;
+$color-dark-gray: #1e2528;
+
+/* font-size */
+$font-size-main: 16px;
+$font-size-menu-top: 15px;
+$font-size-footer: 15px;
+$font-size-header-description: 15px;
+$font-size-section-title: 42px;
+$font-size-header-title: 50px;
+
+// section Procedures & Blog
+$font-size-box-titel: 22px;
+
+/* box-shadow section Procedures & Blog*/
+$box-shadow: 0 5px 20px #f0f0f0;
+$box-shadow-overlay: 0 5px 20px #000;
+
+/* actions */
+$opacity: .5s;
+$transition: .2s;

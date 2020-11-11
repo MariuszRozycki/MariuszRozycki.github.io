@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* fonts */
+/* colors */
+/* font-size */
+/* box-shadow section Procedures & Blog*/
+/* actions */
+/* buttons global */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 16px;
+  width: 155px;
+  height: 55px;
+  font-family: "Roboto", sans-serif;
+  transition: 0.2s;
+}
+
+.button:hover {
+  text-decoration: none;
+  color: #1e2528;
+}
+
+.button i {
+  padding-left: 10px;
+  font-size: 12px;
+  width: 20px;
+}
+
+/* button header */
+.button-header-reserve {
+  background-color: #1ba4ce;
+  margin-right: 10px;
+}
+
+.not-visible {
+  display: none;
+}
+
+.visibility {
+  visibility: hidden;
+}
+
+.no-opacity {
+  opacity: 1;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.drop-image {
+  background-image: url(../img/header-bg.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 32%;
+  width: 100%;
+  height: 700px;
+}
+
+/* media */
+@media (max-width: 991px) {
+  .drop-image {
+    left: 42%;
+  }
+}
+
+@media (max-width: 768px) {
+  .drop-image {
+    display: none;
+  }
+}
+
+@media (min-width: 1395px) {
+  .side-flowers {
+    background-image: url(../../img/header-flowers.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 160px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+  }
+}
+
+.row {
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav {
+  position: relative;
+  height: 80px;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Roboto", sans-serif;
+}
+
+.logo-txt {
+  margin-right: 10px;
+}
+
+.logo-txt img {
+  width: 80px;
+}
+
+.main-nav-list {
+  position: relative;
+  flex-basis: 100%;
+  height: 100%;
+  list-style: none;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.main-nav-li a {
+  display: block;
+  font-size: 14px;
+  margin-right: 10px;
+  color: #000;
+  text-decoration: none;
+}
+
+.hamburger {
+  position: relative;
+  padding-right: 40px;
+}
+
+.hamburger i {
+  font-size: 22px;
+}
+
+.times {
+  margin-right: 10px;
+}
+
+.fa-times {
+  font-size: 22px;
+  color: #fff;
+  margin: 10px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 99;
+}
+
+/* media */
+@media (max-width: 767px) {
+  .main-nav-list {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    width: 150px;
+    height: 220px;
+    background-color: #1ba4ce;
+    text-align: right;
+    box-shadow: 0 5px 20px #000;
+    z-index: 100;
+  }
+  .main-nav-list li {
+    margin: 10px;
+  }
+  .main-nav-list li a {
+    color: #fff;
+  }
+}
+
+header {
+  padding-top: 150px;
+  font-family: "Bellota", cursive;
+  overflow-x: hidden;
+}
+
+.header-profession {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.header-title {
+  font-size: 50px;
+}
+
+.header-description {
+  font-size: 15px;
+}
+
+.wrapper-header-buttons {
+  display: flex;
+}
+
+.video {
+  width: 200px;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #1e2528;
+  transition: 0.2s;
+}
+
+.video:hover {
+  text-decoration: none;
+  color: #1ba4ce;
+}
+
+.video:hover .video-play-circle {
+  border: 1px solid #1ba4ce;
+}
+
+.video-play-circle {
+  width: 35px;
+  height: 35px;
+  border: 1px solid black;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.header-spalsh-logo-box {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  min-height: 500px;
+}
+
+.header-splash-logo {
+  width: 100px;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-logo-description {
+  position: absolute;
+  top: 185px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.header-subtitle {
+  font-family: "Bellota", cursive;
+  font-size: 22px;
+  font-weight: 700;
+  position: absolute;
+  top: 230px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.header-subtitle-description {
+  position: absolute;
+  top: 290px;
+  left: 15%;
+  width: 70%;
+  text-align: center;
+  color: #1e2528;
+  font-weight: 300;
+  text-align: center;
+}
+
+.button-read-more {
+  background-color: #1ba4ce;
+  position: absolute;
+  top: 440px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 25px;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=style.css.map */

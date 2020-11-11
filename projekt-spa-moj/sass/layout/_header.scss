@@ -1,0 +1,121 @@
+header {
+  padding-top: 150px;
+  font-family: $font-main;
+  overflow-x: hidden;
+}
+
+.header-profession {
+  font-size: $font-size-main;
+  text-transform: uppercase;
+}
+
+.header-title {
+  font-size: $font-size-header-title;
+}
+
+.header-description {
+  font-size: $font-size-header-description;
+}
+
+.wrapper-header-buttons {
+  display: flex;
+}
+
+.video {
+  width: 200px;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  color: $color-dark-gray;
+  transition: $transition;
+
+  &:hover {
+    text-decoration: none;
+    color: $color-blue;
+  }
+
+  &:hover .video-play-circle {
+    border: 1px solid $color-blue;
+  }
+}
+
+
+
+.video-play-circle {
+  width: 35px;
+  height: 35px;
+  border: 1px solid black;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.header-spalsh-logo-box {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  min-height: 500px;
+}
+
+.header-splash-logo {
+  width: 100px;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-logo-description {
+  position: absolute;
+  top: 185px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  font-size: $font-size-header-description;
+  font-weight: 600;
+}
+
+.header-subtitle {
+  font-family: $font-main;
+  font-size: $font-size-box-titel;
+  font-weight: 700;
+  position: absolute;
+  top: 230px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.header-subtitle-description {
+  position: absolute;
+  top: 290px;
+  left: 15%;
+  width: 70%;
+  text-align: center;
+  color: $color-dark-gray;
+  font-weight: 300;
+  text-align: center;
+}
+
+.button-read-more {
+  background-color: $color-blue;
+  position: absolute;
+  top: 440px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 25px;
+  text-transform: uppercase;
+}
+
+
+// @media(max-width: 768px) {
+//   .header-title {
+//     text-align: center;
+//   }
+// }
