@@ -58,6 +58,10 @@ body {
   overflow-x: hidden;
 }
 
+.container {
+  margin: 0 auto;
+}
+
 .drop-image {
   background-image: url(../img/header-bg.png);
   background-position: center;
@@ -224,44 +228,36 @@ header {
 }
 
 .header-spalsh-logo-box {
-  position: relative;
-  width: 100%;
-  height: 800px;
+  height: 600px;
+}
+
+.header-spalsh-logo-box .container {
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-splash-logo {
   width: 100px;
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .header-logo-description {
-  position: absolute;
-  top: 185px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 10px;
   text-transform: uppercase;
   font-size: 15px;
   font-weight: 600;
 }
 
 .header-subtitle {
+  width: 80%;
   font-family: "Bellota", cursive;
   font-size: 22px;
-  font-weight: 700;
-  position: absolute;
-  top: 230px;
-  left: 50%;
-  transform: translateX(-50%);
   text-align: center;
 }
 
 .header-subtitle-description {
-  position: absolute;
-  top: 290px;
-  left: 15%;
+  margin-top: 30px;
   width: 70%;
   text-align: center;
   color: #1e2528;
@@ -271,12 +267,61 @@ header {
 
 .button-read-more {
   background-color: #1ba4ce;
-  position: absolute;
-  top: 58%;
-  left: 50%;
-  transform: translateX(-50%);
   border-radius: 25px;
   text-transform: uppercase;
+}
+
+.overlay {
+  display: none;
+}
+
+.serivces-wrapper {
+  flex-wrap: wrap;
+}
+
+.services-overlay {
+  background-color: rgba(27, 164, 206, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  transition: 2s;
+}
+
+.services-item {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.services-item:hover .services-overlay {
+  z-index: 1;
+}
+
+.services-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+img.spa {
+  width: 30%;
+}
+
+.services-item-description {
+  text-align: center;
+  color: #fff;
+  margin-top: 10px;
 }
 
 /* media */

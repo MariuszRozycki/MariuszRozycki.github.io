@@ -38,6 +38,8 @@ const calculate = () => {
 
     case '-':
       action = before - actually;
+      // action = before - (before / 100 * actually);
+
       break;
 
     case '×':
@@ -58,6 +60,7 @@ const calculate = () => {
 
     case '%':
       action = before / 100 * actually;
+
       break;
 
     case '^':
@@ -126,7 +129,6 @@ const clearResult = () => {
   actionActually = '';
   action = undefined;
 }
-
 
 numbers.forEach((number) => {
   number.addEventListener('click', () => {
