@@ -21,6 +21,21 @@
       }
     }
   }
+
+  .button-popular-procedures {
+    width: 130px;
+    font-size: $font-size-main - 2;
+  }
+}
+
+@media(max-width: 576px) {
+  .services-item {
+    height: 200px;
+  }
+
+  img.spa {
+    width: 10%;
+  }
 }
 
 @media(max-width: 500px) {
