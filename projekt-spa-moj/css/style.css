@@ -358,7 +358,6 @@ img.spa {
 
 .popular-procedures-wrapper-item {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -385,7 +384,6 @@ img.spa {
 }
 
 .button-popular-procedures {
-  display: block;
   background-color: #1e2528;
   margin: 20px auto 0 auto;
 }
@@ -428,6 +426,13 @@ img.spa {
   img.spa {
     width: 10%;
   }
+  .popular-procedures-wrapper-item {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .popular-procedures-item {
+    width: 100%;
+  }
 }
 
 @media (max-width: 500px) {
@@ -447,9 +452,6 @@ img.spa {
     width: 30px;
     height: 30px;
     margin-right: 5px;
-  }
-  .popular-procedures-item {
-    flex-basis: auto;
   }
 }
 

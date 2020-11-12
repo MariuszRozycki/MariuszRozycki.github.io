@@ -10,7 +10,6 @@
 
 .popular-procedures-wrapper-item {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -41,7 +40,6 @@
 }
 
 .button-popular-procedures {
-  display: block;
   background-color: $color-dark-gray;
   margin: 20px auto 0 auto;
 
