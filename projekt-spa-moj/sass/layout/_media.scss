@@ -60,6 +60,10 @@
       margin-right: 5px;
     }
   }
+
+  .popular-procedures-item {
+    flex-basis: auto;
+  }
 }
 
 @media(max-width: 400px) {

@@ -20,7 +20,7 @@
   flex-direction: column;
   display: flex;
   flex-basis: 30%;
-
+  flex-wrap: wrap;
   align-items: center;
   text-align: center;
   padding: 15px 15px 30px 15px;
@@ -43,7 +43,7 @@
 .button-popular-procedures {
   display: block;
   background-color: $color-dark-gray;
-  margin: 0 auto;
+  margin: 20px auto 0 auto;
 
   &:hover {
     background-color: $color-blue;

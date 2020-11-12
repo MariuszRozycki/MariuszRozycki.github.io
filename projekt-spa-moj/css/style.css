@@ -366,6 +366,7 @@ img.spa {
   flex-direction: column;
   display: flex;
   flex-basis: 30%;
+  flex-wrap: wrap;
   align-items: center;
   text-align: center;
   padding: 15px 15px 30px 15px;
@@ -386,7 +387,7 @@ img.spa {
 .button-popular-procedures {
   display: block;
   background-color: #1e2528;
-  margin: 0 auto;
+  margin: 20px auto 0 auto;
 }
 
 .button-popular-procedures:hover {
@@ -446,6 +447,9 @@ img.spa {
     width: 30px;
     height: 30px;
     margin-right: 5px;
+  }
+  .popular-procedures-item {
+    flex-basis: auto;
   }
 }
 
