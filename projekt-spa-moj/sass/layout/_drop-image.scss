@@ -1,20 +1,38 @@
 .drop-image {
   background-image: url(../img/header-bg.png);
-  background-position: center;
+  background-position: right;
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
   top: 0;
-  left: 32%;
+  right: 0;
   width: 100%;
   height: 700px;
 
 }
 
 /* media */
-@media(max-width: 991px) {
+@media(max-width: 1199px) {
   .drop-image {
-    left: 42%;
+    height: 600px;
+  }
+}
+
+@media(max-width: 1112px) {
+  .drop-image {
+    height: 550px;
+  }
+}
+
+@media(max-width: 997px) {
+  .drop-image {
+    height: 500px;
+  }
+}
+
+@media(max-width: 906px) {
+  .drop-image {
+    height: 450px;
   }
 }
 
