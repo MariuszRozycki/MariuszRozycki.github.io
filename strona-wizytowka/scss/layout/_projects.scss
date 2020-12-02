@@ -1,0 +1,162 @@
+.projects {
+  width: 100%;
+  height: 1000px;
+  background-image: url('/img/bcg-projects.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.flex {
+  @include flex;
+  @include flex-align(flex-start, center);
+}
+
+.wrapper-all-icons {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 800px;
+  height: 800px;
+  flex-basis: 100%;
+  border: 5px solid #17DAA3;
+  box-shadow: 0 0 50px #17DAA3;
+  border-radius: 50%;
+  @include flex;
+  @include flex-align(center, center);
+}
+
+.wrapper-icon {
+  @include flex;
+  @include flex-align(center, center);
+  width: 120px;
+  height: 120px;
+  border: 1px solid #17DAA3; // to make variable
+  border-radius: 50%;
+  background-color: #000; // to make variable
+  margin: 15px;
+  transition: 1s;
+}
+
+// .wrapper-icon:hover {
+//   transform: translateY(-8%);
+//   box-shadow: 0 0 10px #17DAA3;
+//   border-bottom: 3px solid #17DAA3;
+//   transform: rotateY(360deg);
+// }
+
+.project-icon {
+  font-size: 50px;
+  color: $color-cosmic-green; // to make variable
+}
+
+.wrapper-icon-html {
+  position: absolute;
+  top: 25%;
+  transform: translateY(-25%);
+  left: 0;
+}
+
+.wrapper-icon-css {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.wrapper-icon-js {
+  position: absolute;
+  top: 25%;
+  transform: translateY(-25%);
+  right: 0;
+}
+
+.wrapper-icon-react {
+  position: absolute;
+  bottom: 25%;
+  transform: translateY(+25%);
+  left: 0;
+}
+
+.wrapper-icon-git {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.wrapper-icon-wp {
+  position: absolute;
+  bottom: 25%;
+  transform: translateY(+25%);
+  right: 0;
+}
+
+@keyframes animation {
+  0% {
+    .wrapper-icon-html {
+      position: absolute;
+      top: 25%;
+      transform: translateY(-25%);
+      left: 0;
+    }
+
+    .wrapper-icon-css {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .wrapper-icon-js {
+      position: absolute;
+      top: 25%;
+      transform: translateY(-25%);
+      right: 0;
+    }
+
+    .wrapper-icon-react {
+      position: absolute;
+      bottom: 25%;
+      transform: translateY(+25%);
+      left: 0;
+    }
+
+    .wrapper-icon-git {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .wrapper-icon-wp {
+      position: absolute;
+      bottom: 25%;
+      transform: translateY(+25%);
+      right: 0;
+    }
+  }
+
+  16% {
+    .wrapper-icon-html {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.animation {
+  animation-name: animation;
+  animation-duration: 4s;
+  animation-iteration-count: 3;
+}
+
+
+
+
+
+
+
+
