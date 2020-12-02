@@ -406,7 +406,8 @@ h3 {
   align-items: center;
   width: 120px;
   height: 120px;
-  border: 1px solid #17DAA3;
+  border: 5px solid #17DAA3;
+  box-shadow: 0 0 10px #17DAA3;
   border-radius: 50%;
   background-color: #000;
   margin: 15px;
@@ -414,7 +415,7 @@ h3 {
 }
 
 .project-icon {
-  font-size: 50px;
+  font-size: 60px;
   color: #17DAA3;
 }
 
@@ -422,12 +423,13 @@ h3 {
   position: absolute;
   top: 25%;
   transform: translateY(-25%);
-  left: 0;
+  left: -5%;
+  border-radius: 50%;
 }
 
 .wrapper-icon-css {
   position: absolute;
-  top: 0;
+  top: -8%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -436,19 +438,19 @@ h3 {
   position: absolute;
   top: 25%;
   transform: translateY(-25%);
-  right: 0;
+  right: -5%;
 }
 
 .wrapper-icon-react {
   position: absolute;
   bottom: 25%;
   transform: translateY(25%);
-  left: 0;
+  left: -5%;
 }
 
 .wrapper-icon-git {
   position: absolute;
-  bottom: 0;
+  bottom: -8%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -457,60 +459,39 @@ h3 {
   position: absolute;
   bottom: 25%;
   transform: translateY(25%);
-  right: 0;
+  right: -5%;
 }
 
-@keyframes animation {
+@keyframes move-around {
   0% {
-    .wrapper-icon-html {
-      position: absolute;
-      top: 25%;
-      transform: translateY(-25%);
-      left: 0;
-    }
-    .wrapper-icon-css {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    .wrapper-icon-js {
-      position: absolute;
-      top: 25%;
-      transform: translateY(-25%);
-      right: 0;
-    }
-    .wrapper-icon-react {
-      position: absolute;
-      bottom: 25%;
-      transform: translateY(25%);
-      left: 0;
-    }
-    .wrapper-icon-git {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    .wrapper-icon-wp {
-      position: absolute;
-      bottom: 25%;
-      transform: translateY(25%);
-      right: 0;
-    }
+    transform: rotate(0deg);
   }
-  16% {
-    .wrapper-icon-html {
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes move-icons-around {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
 .animation {
-  animation-name: animation;
-  animation-duration: 4s;
-  animation-iteration-count: 3;
+  animation-name: move-around;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.animation-icons {
+  animation-name: move-icons-around;
+  animation-direction: reverse;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 /*# sourceMappingURL=style.css.map */
