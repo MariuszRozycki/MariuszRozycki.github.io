@@ -1,0 +1,69 @@
+.appointment {
+  padding: 0;
+
+  form {
+    width: 100%;
+    height: 50vh;
+    background-color: #17DAA3;
+    padding: 80px 40px;
+    @include flex;
+    justify-content: center;
+    align-items: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+   
+
+    input[type="text"], 
+    input[type="email"],
+    select[name="service"],
+    input[type="tel"],
+    textarea[name="message"] {
+      flex-basis: 49%;
+      margin-top: 20px;  
+      margin-bottom: 20px;
+      padding: 30px 5px;  
+    }
+
+    input[type="text"],
+    select[name="service"] {
+      margin-right: 10px;
+    }
+
+    textarea[name="message"] {
+      flex-basis: 100%;
+      padding: 30px 5px;
+      margin: 20px 20%;
+    }
+
+
+    button[type="submit"] {
+      padding: 10px 15px 10px 15px;
+      -webkit-transition: 0.2s;
+      transition: 0.2s;
+      border-radius: 50px;
+      display: block;
+      border-bottom: 3px solid transparent;
+      width: 180px;
+      margin: 20px auto;
+    }
+
+    .appointment-message {
+      width: 100%;
+      display: none;
+
+      &.error {
+        color: red;
+        display: block;
+      }
+
+      &.send {
+        color: #fff;
+        display: block;
+      }
+    }
+  }
+
+  
+
+    }
+  

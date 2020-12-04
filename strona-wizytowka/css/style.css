@@ -142,6 +142,8 @@ table {
   box-sizing: border-box;
 }
 
+/* Container */
+/* Mobile breakpoints */
 /* colors */
 /* global */
 body {
@@ -184,7 +186,7 @@ h3 {
 /* splash */
 .splash {
   background: url(https://i.postimg.cc/6qhkzVTT/aurora-borealis-photo-1933318.jpg);
-  min-height: 80vh;
+  height: 100vh;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -213,10 +215,6 @@ h3 {
   color: white;
 }
 
-.navigation i {
-  display: none;
-}
-
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -231,7 +229,7 @@ h3 {
 }
 
 .logo {
-  flex-basis: 40%;
+  flex-basis: 30%;
   font-size: 25px;
 }
 
@@ -252,6 +250,13 @@ h3 {
   box-shadow: 0 0 25px white;
 }
 
+i.fa-bars,
+i.fa-times {
+  display: none;
+  font-size: 35px;
+  text-align: right;
+}
+
 .navigation ul {
   display: flex;
   justify-content: flex-end;
@@ -259,7 +264,7 @@ h3 {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   text-transform: uppercase;
-  flex-basis: 60%;
+  flex-basis: 70%;
   margin: 0 20px;
 }
 
@@ -295,7 +300,7 @@ h3 {
 }
 
 .splash-inner h1 {
-  font-size: 45px;
+  font-size: 66px;
   font-weight: lighter;
   letter-spacing: 7px;
   line-height: 1.2;
@@ -329,50 +334,133 @@ h3 {
   box-shadow: 0px 0px 25px white;
 }
 
+@media all and (max-width: 992px) {
+  .navigation ul {
+    margin: 0 20px 0 auto;
+  }
+  .navigation ul li {
+    margin-right: 10px;
+  }
+}
+
+/* NIE RUSZAC */
+@media all and (max-width: 768px) {
+  .splash-inner h1 {
+    font-size: 50px;
+  }
+  i.fa-bars {
+    position: absolute;
+    right: 0;
+    display: block;
+  }
+  i.fa-bars.hide {
+    display: none;
+  }
+  i.fa-times.show {
+    display: block;
+  }
+  .navigation ul {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    top: 60px;
+    right: 5px;
+    margin: 0;
+    padding: 20px;
+    background-color: #17DAA3;
+    text-align: right;
+    z-index: 2;
+  }
+  .navigation ul li {
+    margin: 10px 0;
+    padding: 0;
+  }
+  .navigation ul li a {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .splash-inner {
+    width: 90%;
+  }
+  .splash-inner h1 {
+    font-size: 42px;
+    letter-spacing: 0;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .splash-inner h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+  }
+  .splash-inner h1 span {
+    letter-spacing: 0;
+  }
+}
+
+/* animacje do hamburgera */
 .about {
   width: 100%;
 }
 
-.wrapper-about-description {
+.about .wrapper-about-description {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  width: 80%;
+  margin: 0 auto;
 }
 
-.about-img-description-wrapper {
+.about .wrapper-about-description .about-img-description-wrapper {
   flex-basis: 30%;
   height: 300px;
-  border-radius: 50%;
-  margin-right: 20px;
+  margin-right: 40px;
 }
 
-.about-img-description-wrapper img {
+.about .wrapper-about-description .about-img-description-wrapper img {
   width: 300px;
   object-fit: cover;
   height: 300px;
-  border-radius: 50%;
+  border-radius: 50px;
   border: 5px solid #17DAA3;
   box-shadow: 0 0 20px #17DAA3;
 }
 
-.about-description {
+.about .wrapper-about-description .about-description {
   flex-basis: 70%;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 300;
   letter-spacing: 2px;
   text-align: justify;
+  text-align-last: center;
+}
+
+@media all and (max-width: 992px) {
+  .about .wrapper-about-description {
+    flex-direction: column;
+  }
+  .about .wrapper-about-description img {
+    margin-bottom: 50px;
+  }
 }
 
 .technologies {
   width: 100%;
-  height: 1000px;
+  height: 100vh;
   background-image: url(https://i.postimg.cc/G2N1zPTr/bcg-projects.jpg);
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  top: 0;
-  left: 0;
 }
 
 .technologies {
@@ -382,9 +470,16 @@ h3 {
   flex-direction: column;
 }
 
+.technologies .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .wrapper-all-icons {
-  width: 600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   border: 5px solid #17DAA3;
   box-shadow: 0 0 50px #17DAA3;
   border-radius: 50%;
@@ -395,35 +490,35 @@ h3 {
   border-radius: 50%;
   padding: 0;
   list-style: none;
-  margin: 5em auto 0;
+  margin: 180px auto 0;
 }
 
 .technologies-title {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  color: #17DAA3;
-  font-weight: 300;
+  color: #000;
+  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   box-shadow: 0 0 80px #17DAA3;
-  font-size: 40px;
-  padding: 50px;
+  background-color: rgba(23, 218, 163, 0.8);
+  font-size: 35px;
+  padding: 20px;
   text-align: center;
-  border-radius: 50%;
+  border-radius: 50px;
+  position: absolute;
+  margin: 0 auto;
+  z-index: 999;
+  width: 120%;
 }
 
 .wrapper-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   border: 5px solid #17DAA3;
   box-shadow: 0 0 10px #17DAA3;
   border-radius: 50%;
@@ -435,31 +530,31 @@ h3 {
 }
 
 .wrapper-icon-html {
-  transform: translate(24em);
+  transform: translate(15em);
 }
 
 .wrapper-icon-css {
-  transform: rotate(45deg) translate(24em) rotate(-45deg);
+  transform: rotate(45deg) translate(15em) rotate(-45deg);
 }
 
 .wrapper-icon-js {
-  transform: rotate(135deg) translate(24em) rotate(-135deg);
+  transform: rotate(135deg) translate(15em) rotate(-135deg);
 }
 
 .wrapper-icon-react {
-  transform: translate(-24em);
+  transform: translate(-15em);
 }
 
 .wrapper-icon-git {
-  transform: rotate(225deg) translate(24em) rotate(-225deg);
+  transform: rotate(225deg) translate(15em) rotate(-225deg);
 }
 
 .wrapper-icon-wp {
-  transform: rotate(315deg) translate(24em) rotate(-315deg);
+  transform: rotate(315deg) translate(15em) rotate(-315deg);
 }
 
 .project-icon {
-  font-size: 60px;
+  font-size: 40px;
   color: #17DAA3;
 }
 
@@ -474,37 +569,37 @@ h3 {
 
 @keyframes animation-icon1 {
   0% {
-    transform: rotate(0deg) translate(24em);
+    transform: rotate(0deg) translate(15em);
   }
   50% {
-    transform: rotate(180deg) translate(24em);
+    transform: rotate(180deg) translate(15em);
   }
   100% {
-    transform: rotate(360deg) translate(24em);
+    transform: rotate(360deg) translate(15em);
   }
 }
 
 @keyframes animation-icon3 {
   0% {
-    transform: rotate(360deg) translate(24em);
+    transform: rotate(360deg) translate(15em);
   }
   50% {
-    transform: rotate(180deg) translate(24em);
+    transform: rotate(180deg) translate(15em);
   }
   100% {
-    transform: rotate(0deg) translate(24em);
+    transform: rotate(0deg) translate(15em);
   }
 }
 
 @keyframes animation-icon5 {
   0% {
-    transform: rotate(0deg) translate(24em);
+    transform: rotate(0deg) translate(15em);
   }
   50% {
-    transform: rotate(90deg) translate(24em);
+    transform: rotate(90deg) translate(15em);
   }
   100% {
-    transform: rotate(360deg) translate(24em);
+    transform: rotate(360deg) translate(15em);
   }
 }
 
@@ -534,76 +629,71 @@ h3 {
 .animation-icon5 {
   animation-name: animation-icon5;
   animation-direction: reverse;
-  animation-duration: 35s;
+  animation-duration: 15s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
-.projects {
-  background-color: rgba(23, 218, 163, 0.2);
-}
-
-.projects ul li {
-  list-style: none;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 30px auto;
-}
-
-.projects i {
-  margin-right: 60px;
-  font-size: 32px;
-}
-
-.projects a {
-  color: black;
-  font-size: 32px;
-  padding: 10px 30px;
-  border-radius: 20px;
-  box-shadow: 0 0 50px #17DAA3;
-  background-color: #17DAA3;
-  transition: .2s;
-}
-
-.projects a:hover {
-  transform: translateX(30px);
-}
-
-/* #projects animations */
-@keyframes move-to-right-1 {
-  0% {
-    transform: translateX(0);
+@media all and (max-width: 768px) {
+  .wrapper-all-icons {
+    width: 300px;
+    height: 300px;
+    margin-top: 290px;
   }
-  50% {
-    transform: translateX(40px);
+  @keyframes animation-icon1 {
+    0% {
+      transform: rotate(0deg) translate(8em);
+    }
+    50% {
+      transform: rotate(180deg) translate(8em);
+    }
+    100% {
+      transform: rotate(360deg) translate(8em);
+    }
   }
-  100% {
-    transform: translateX(0);
+  @keyframes animation-icon3 {
+    0% {
+      transform: rotate(360deg) translate(8em);
+    }
+    50% {
+      transform: rotate(180deg) translate(8em);
+    }
+    100% {
+      transform: rotate(0deg) translate(8em);
+    }
   }
-}
-
-@keyframes move-to-right-2 {
-  0% {
-    transform: translateX(40px);
+  @keyframes animation-icon5 {
+    0% {
+      transform: rotate(0deg) translate(8em);
+    }
+    50% {
+      transform: rotate(90deg) translate(8em);
+    }
+    100% {
+      transform: rotate(360deg) translate(8em);
+    }
   }
-  50% {
-    transform: translateX(0);
+  .wrapper-all-icons .wrapper-icon-html {
+    transform: translate(8em);
   }
-  100% {
-    transform: translateX(40px);
+  .wrapper-all-icons .wrapper-icon-css {
+    transform: rotate(45deg) translate(8em) rotate(-45deg);
   }
-}
-
-.move-to-right-1 {
-  animation-name: move-to-right-1;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-}
-
-.move-to-right-2 {
-  animation-name: move-to-right-2;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  .wrapper-all-icons .wrapper-icon-js {
+    transform: rotate(135deg) translate(8em) rotate(-135deg);
+  }
+  .wrapper-all-icons .wrapper-icon-react {
+    transform: translate(8em);
+  }
+  .wrapper-all-icons .wrapper-icon-git {
+    transform: rotate(225deg) translate(8em) rotate(-225deg);
+  }
+  .wrapper-all-icons .wrapper-icon-wp {
+    transform: rotate(315deg) translate(8em) rotate(-315deg);
+  }
+  .wrapper-all-icons .project-icon {
+    font-size: 30px;
+    color: #17DAA3;
+  }
 }
 /*# sourceMappingURL=style.css.map */

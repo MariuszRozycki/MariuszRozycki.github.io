@@ -2,35 +2,36 @@
 
   background-color: rgba(23, 218, 163, .2);
 
+  ul li {
+    list-style: none;
+    @include flex;
+    @include flex-align (flex-start, center);
+    margin: 30px auto;
+
+    i {
+      margin-right: 60px;
+      font-size: 2em;
+    }
+
+    a {
+      color: black;
+      font-size: 1em;
+      padding: 10px 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 50px #17DAA3;
+      background-color: #17DAA3;
+      transition: .2s;
+
+      &:hover {
+        transform: translateX(30px);
+      }
+    }
+
     
-}
-
-.projects ul li {
-  list-style: none;
-  @include flex;
-  @include flex-align (flex-start, center);
-  margin: 30px auto;
-}
-
-.projects i {
-  margin-right: 60px;
-  font-size: 32px;  
+  }
 }
 
 
-.projects a {
-  color: black;
-  font-size: 32px;
-  padding: 10px 30px;
-  border-radius: 20px;
-  box-shadow: 0 0 50px #17DAA3;
-  background-color: #17DAA3;
-  transition: .2s;
-}
-
-.projects a:hover {
-  transform: translateX(30px);
-}
 
 /* #projects animations */
 

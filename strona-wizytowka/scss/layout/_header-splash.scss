@@ -1,7 +1,7 @@
 /* splash */
 .splash {
   background: url(https://i.postimg.cc/6qhkzVTT/aurora-borealis-photo-1933318.jpg);
-  min-height: 80vh;
+  height: 100vh;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,13 +32,7 @@
   color: white;
 }
 
-.navigation i {
-  display: none;
-}
-
 .navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
   @include flex;
   @include flex-align(space-between, center);
   -webkit-box-pack: justify;
@@ -51,8 +45,8 @@
 }
 
 .logo {
-  -ms-flex-preferred-size: 40%;
-  flex-basis: 40%;
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
   font-size: 25px;
 }
 
@@ -75,16 +69,21 @@
   box-shadow: 0 0 25px white;
 }
 
+i.fa-bars,
+i.fa-times {
+  display: none;
+  font-size: 35px;
+  text-align: right;
+}
+
 .navigation ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   @include flex;
   @include flex-align(flex-end, center);
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   text-transform: uppercase;
   -ms-flex-preferred-size: 60%;
-  flex-basis: 60%;
+  flex-basis: 70%;
   margin: 0 20px;
 }
 
@@ -125,7 +124,7 @@
 }
 
 .splash-inner h1 {
-  font-size: 45px;
+  font-size: 66px;
   font-weight: lighter;
   letter-spacing: 7px;
   line-height: 1.2;
@@ -160,3 +159,142 @@
   -webkit-box-shadow: 0px 0px 25px white;
   box-shadow: 0px 0px 25px white;
 }
+
+@media all and (max-width: $large) {
+  .navigation ul {
+    margin: 0 20px 0 auto;
+
+    li {
+      margin-right: 10px;
+    }
+  }
+}
+
+
+/* NIE RUSZAC */
+@media all and (max-width: $medium) {
+
+  .splash-inner h1 {
+    font-size: 50px;
+  }
+
+  i.fa-bars {
+    position: absolute;
+    right: 0;
+    display: block;
+  }
+
+  i.fa-bars.hide {
+    display: none;
+  }
+
+  i.fa-times.show {
+    display: block;
+  }
+
+  .navigation ul {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    top: 60px;
+    right: 5px;
+    margin: 0;
+    padding: 20px;
+    background-color: $color-cosmic-green;
+    text-align: right;
+    z-index: 2;
+
+  
+    li {
+      margin: 10px 0;
+      padding: 0;
+
+      a {
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+      }
+    }
+
+  }
+}
+
+@media all and (max-width: $small) {
+
+  .splash-inner {
+    width: 90%;
+
+    h1 {
+    font-size: 42px;
+    letter-spacing: 0;
+    }
+  }
+}
+
+@media all and (max-width: $extra-small) {
+  .splash-inner {
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 36px;
+
+      span {
+        letter-spacing: 0;
+      }
+    }
+    
+    
+  }
+
+}
+
+
+/* animacje do hamburgera */
+// @keyframes menu-animation {
+//   0% {
+//     height: 0;
+//     right: 5px;
+//     margin: 0;
+//     padding: 0 20px 0 20px;
+//     display: block;
+//   }
+
+//   100% {
+//     height: 200px;
+//     margin: 0;
+//     padding: 0 20px 20px 20px;
+//     right: 5px;
+//     display: block;
+//   }
+// }
+
+// .menu-animation {
+//   animation-name: menu-animation;
+//   animation-duration: 1s;
+// }
+
+// @keyframes menu-animation-rev {
+//    0% {
+//      height: 200px;
+//      margin: 0;
+//      padding: 0 20px 20px 20px;
+//      right: 5px;
+//    }
+
+//    100% {
+//      height: 0;
+//      right: 5px;
+//      margin: 0;
+//      padding: 0 20px 0 20px;
+//    }
+// }
+
+// .menu-animation-rev {
+//   animation-name: menu-animation-rev;
+//   animation-duration: 1s;
+// }
+
