@@ -170,7 +170,8 @@ a {
 }
 
 h3 {
-  font-size: 26px;
+  font-size: 50px;
+  text-align: center;
 }
 
 .emphasis-line {
@@ -330,12 +331,6 @@ h3 {
 
 .about {
   width: 100%;
-  background-color: rgba(23, 218, 163, 0.1);
-}
-
-.about h3 {
-  text-align: center;
-  font-size: 50px;
 }
 
 .wrapper-about-description {
@@ -369,35 +364,58 @@ h3 {
   text-align: justify;
 }
 
-.projects {
+.technologies {
   width: 100%;
   height: 1000px;
   background-image: url(https://i.postimg.cc/G2N1zPTr/bcg-projects.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  top: 0;
+  left: 0;
 }
 
-.flex {
+.technologies {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-direction: column;
 }
 
 .wrapper-all-icons {
-  position: relative;
-  top: 0;
-  left: 0;
-  margin: 0 auto;
-  width: 800px;
-  height: 800px;
-  flex-basis: 100%;
+  width: 600px;
+  height: 600px;
   border: 5px solid #17DAA3;
   box-shadow: 0 0 50px #17DAA3;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  border-radius: 50%;
+  padding: 0;
+  list-style: none;
+  margin: 5em auto 0;
+}
+
+.technologies-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  color: #17DAA3;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0 0 80px #17DAA3;
+  font-size: 40px;
+  padding: 50px;
+  text-align: center;
+  border-radius: 50%;
 }
 
 .wrapper-icon {
@@ -410,56 +428,39 @@ h3 {
   box-shadow: 0 0 10px #17DAA3;
   border-radius: 50%;
   background-color: #000;
-  margin: 15px;
-  transition: 1s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -3em;
+}
+
+.wrapper-icon-html {
+  transform: translate(24em);
+}
+
+.wrapper-icon-css {
+  transform: rotate(45deg) translate(24em) rotate(-45deg);
+}
+
+.wrapper-icon-js {
+  transform: rotate(135deg) translate(24em) rotate(-135deg);
+}
+
+.wrapper-icon-react {
+  transform: translate(-24em);
+}
+
+.wrapper-icon-git {
+  transform: rotate(225deg) translate(24em) rotate(-225deg);
+}
+
+.wrapper-icon-wp {
+  transform: rotate(315deg) translate(24em) rotate(-315deg);
 }
 
 .project-icon {
   font-size: 60px;
   color: #17DAA3;
-}
-
-.wrapper-icon-html {
-  position: absolute;
-  top: 25%;
-  transform: translateY(-25%);
-  left: -5%;
-  border-radius: 50%;
-}
-
-.wrapper-icon-css {
-  position: absolute;
-  top: -8%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.wrapper-icon-js {
-  position: absolute;
-  top: 25%;
-  transform: translateY(-25%);
-  right: -5%;
-}
-
-.wrapper-icon-react {
-  position: absolute;
-  bottom: 25%;
-  transform: translateY(25%);
-  left: -5%;
-}
-
-.wrapper-icon-git {
-  position: absolute;
-  bottom: -8%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.wrapper-icon-wp {
-  position: absolute;
-  bottom: 25%;
-  transform: translateY(25%);
-  right: -5%;
 }
 
 @keyframes move-around {
@@ -471,27 +472,138 @@ h3 {
   }
 }
 
-@keyframes move-icons-around {
+@keyframes animation-icon1 {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0deg) translate(24em);
+  }
+  50% {
+    transform: rotate(180deg) translate(24em);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(360deg) translate(24em);
+  }
+}
+
+@keyframes animation-icon3 {
+  0% {
+    transform: rotate(360deg) translate(24em);
+  }
+  50% {
+    transform: rotate(180deg) translate(24em);
+  }
+  100% {
+    transform: rotate(0deg) translate(24em);
+  }
+}
+
+@keyframes animation-icon5 {
+  0% {
+    transform: rotate(0deg) translate(24em);
+  }
+  50% {
+    transform: rotate(90deg) translate(24em);
+  }
+  100% {
+    transform: rotate(360deg) translate(24em);
   }
 }
 
 .animation {
   animation-name: move-around;
-  animation-duration: 30s;
+  animation-duration: 90s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
-.animation-icons {
-  animation-name: move-icons-around;
+.animation-icon1 {
+  animation-name: animation-icon1;
   animation-direction: reverse;
   animation-duration: 15s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+
+.animation-icon3 {
+  animation-name: animation-icon3;
+  animation-direction: reverse;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.animation-icon5 {
+  animation-name: animation-icon5;
+  animation-direction: reverse;
+  animation-duration: 35s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.projects {
+  background-color: rgba(23, 218, 163, 0.2);
+}
+
+.projects ul li {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 30px auto;
+}
+
+.projects i {
+  margin-right: 60px;
+  font-size: 32px;
+}
+
+.projects a {
+  color: black;
+  font-size: 32px;
+  padding: 10px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 50px #17DAA3;
+  background-color: #17DAA3;
+  transition: .2s;
+}
+
+.projects a:hover {
+  transform: translateX(30px);
+}
+
+/* #projects animations */
+@keyframes move-to-right-1 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(40px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes move-to-right-2 {
+  0% {
+    transform: translateX(40px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(40px);
+  }
+}
+
+.move-to-right-1 {
+  animation-name: move-to-right-1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.move-to-right-2 {
+  animation-name: move-to-right-2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 /*# sourceMappingURL=style.css.map */
