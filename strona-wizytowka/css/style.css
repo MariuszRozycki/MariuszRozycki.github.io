@@ -449,10 +449,7 @@ i.fa-times {
     flex-direction: column;
   }
   .about .wrapper-about-description .about-img-description-wrapper {
-    margin: 0 auto 30px;
-  }
-  .about .wrapper-about-description .about-img-description-wrapper img {
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
   }
 }
 
