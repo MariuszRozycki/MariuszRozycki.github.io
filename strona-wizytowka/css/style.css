@@ -467,8 +467,7 @@ i.fa-times {
 }
 
 .technologies {
-  width: 100%;
-  height: 100vh;
+  height: auto;
   background-image: url(https://i.postimg.cc/G2N1zPTr/bcg-projects.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -477,16 +476,17 @@ i.fa-times {
 
 .technologies {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 
 .technologies .container {
-  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
 }
 
 .wrapper-all-icons {
@@ -502,7 +502,6 @@ i.fa-times {
   border-radius: 50%;
   padding: 0;
   list-style: none;
-  margin: 180px auto 0;
 }
 
 .technologies-title {
@@ -519,10 +518,7 @@ i.fa-times {
   padding: 20px;
   text-align: center;
   border-radius: 50px;
-  position: absolute;
-  margin: 0 auto;
-  z-index: 999;
-  width: 120%;
+  margin: 0 auto 100px;
 }
 
 .wrapper-icon {
@@ -542,27 +538,27 @@ i.fa-times {
 }
 
 .wrapper-icon-html {
-  transform: translate(15em);
+  transform: rotate(0deg) translate(15em);
 }
 
 .wrapper-icon-css {
-  transform: rotate(45deg) translate(15em) rotate(-45deg);
+  transform: rotate(60deg) translate(15em) rotate(-60deg);
 }
 
 .wrapper-icon-js {
-  transform: rotate(135deg) translate(15em) rotate(-135deg);
+  transform: rotate(120deg) translate(15em);
 }
 
 .wrapper-icon-react {
-  transform: translate(-15em);
+  transform: rotate(-180deg) translate(15em) rotate(180deg);
 }
 
 .wrapper-icon-git {
-  transform: rotate(225deg) translate(15em) rotate(-225deg);
+  transform: rotate(240deg) translate(15em) rotate(-240deg);
 }
 
 .wrapper-icon-wp {
-  transform: rotate(315deg) translate(15em) rotate(-315deg);
+  transform: rotate(300deg) translate(15em) rotate(-30deg);
 }
 
 .project-icon {
@@ -579,69 +575,9 @@ i.fa-times {
   }
 }
 
-@keyframes animation-icon1 {
-  0% {
-    transform: rotate(0deg) translate(15em);
-  }
-  50% {
-    transform: rotate(180deg) translate(15em);
-  }
-  100% {
-    transform: rotate(360deg) translate(15em);
-  }
-}
-
-@keyframes animation-icon3 {
-  0% {
-    transform: rotate(360deg) translate(15em);
-  }
-  50% {
-    transform: rotate(180deg) translate(15em);
-  }
-  100% {
-    transform: rotate(0deg) translate(15em);
-  }
-}
-
-@keyframes animation-icon5 {
-  0% {
-    transform: rotate(0deg) translate(15em);
-  }
-  50% {
-    transform: rotate(90deg) translate(15em);
-  }
-  100% {
-    transform: rotate(360deg) translate(15em);
-  }
-}
-
 .animation {
   animation-name: move-around;
   animation-duration: 90s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-.animation-icon1 {
-  animation-name: animation-icon1;
-  animation-direction: reverse;
-  animation-duration: 15s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-.animation-icon3 {
-  animation-name: animation-icon3;
-  animation-direction: reverse;
-  animation-duration: 25s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-.animation-icon5 {
-  animation-name: animation-icon5;
-  animation-direction: reverse;
-  animation-duration: 15s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -653,66 +589,47 @@ i.fa-times {
   .wrapper-all-icons {
     width: 300px;
     height: 300px;
-    margin-top: 290px;
   }
-  @keyframes animation-icon1 {
-    0% {
-      transform: rotate(0deg) translate(8em);
-    }
-    50% {
-      transform: rotate(180deg) translate(8em);
-    }
-    100% {
-      transform: rotate(360deg) translate(8em);
-    }
-  }
-  @keyframes animation-icon3 {
-    0% {
-      transform: rotate(360deg) translate(8em);
-    }
-    50% {
-      transform: rotate(180deg) translate(8em);
-    }
-    100% {
-      transform: rotate(0deg) translate(8em);
-    }
-  }
-  @keyframes animation-icon5 {
-    0% {
-      transform: rotate(0deg) translate(8em);
-    }
-    50% {
-      transform: rotate(90deg) translate(8em);
-    }
-    100% {
-      transform: rotate(360deg) translate(8em);
-    }
+  .wrapper-all-icons .wrapper-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border: 5px solid #17DAA3;
+    box-shadow: 0 0 10px #17DAA3;
+    border-radius: 50%;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -3em;
   }
   .wrapper-all-icons .wrapper-icon-html {
-    transform: translate(8em);
+    transform: rotate(0deg) translate(9em);
   }
   .wrapper-all-icons .wrapper-icon-css {
-    transform: rotate(45deg) translate(8em) rotate(-45deg);
+    transform: rotate(60deg) translate(9em) rotate(-60deg);
   }
   .wrapper-all-icons .wrapper-icon-js {
-    transform: rotate(135deg) translate(8em) rotate(-135deg);
+    transform: rotate(120deg) translate(9em);
   }
   .wrapper-all-icons .wrapper-icon-react {
-    transform: translate(8em);
+    transform: rotate(-180deg) translate(9em) rotate(180deg);
   }
   .wrapper-all-icons .wrapper-icon-git {
-    transform: rotate(225deg) translate(8em) rotate(-225deg);
+    transform: rotate(240deg) translate(9em) rotate(-240deg);
   }
   .wrapper-all-icons .wrapper-icon-wp {
-    transform: rotate(315deg) translate(8em) rotate(-315deg);
+    transform: rotate(300deg) translate(9em) rotate(-30deg);
   }
   .wrapper-all-icons .project-icon {
-    font-size: 30px;
+    font-size: 40px;
     color: #17DAA3;
   }
 }
 
-@media all and (max-width: 576px) {
+@media all and (max-width: 768px) and (max-width: 576px) {
   .technologies-title {
     width: auto;
   }
@@ -729,18 +646,17 @@ i.fa-times {
     border-radius: 50%;
     padding: 0;
     list-style: none;
-    margin: 380px auto 0;
   }
 }
 
-@media all and (max-width: 576px) {
+@media all and (max-width: 768px) and (max-width: 576px) {
   .technologies-title {
     width: auto;
     font-size: 20px;
   }
   .wrapper-all-icons {
-    width: 20px;
-    height: 50vh;
+    width: 200px;
+    height: 200px;
     border: 5px solid #17DAA3;
     box-shadow: 0 0 50px #17DAA3;
     border-radius: 50%;
@@ -751,7 +667,6 @@ i.fa-times {
     border-radius: 50%;
     padding: 0;
     list-style: none;
-    margin: 200px auto 0;
   }
   .wrapper-all-icons .wrapper-icon {
     display: flex;
@@ -768,87 +683,28 @@ i.fa-times {
     left: 50%;
     margin: -3em;
   }
+  .wrapper-all-icons .wrapper-icon-html {
+    transform: rotate(0deg) translate(7em);
+  }
   .wrapper-all-icons .wrapper-icon-css {
-    transform: translateY(100px);
-    animation-name: move-around;
+    transform: rotate(60deg) translate(7em) rotate(-60deg);
+  }
+  .wrapper-all-icons .wrapper-icon-js {
+    transform: rotate(120deg) translate(6em);
   }
   .wrapper-all-icons .wrapper-icon-react {
-    transform: translateY(200px);
+    transform: rotate(-180deg) translate(6em) rotate(180deg);
+  }
+  .wrapper-all-icons .wrapper-icon-git {
+    transform: rotate(240deg) translate(6em) rotate(-240deg);
   }
   .wrapper-all-icons .wrapper-icon-wp {
-    transform: translateY(-200px);
+    transform: rotate(300deg) translate(6em) rotate(-30deg);
   }
-  @keyframes move-around {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  .wrapper-all-icons .project-icon {
+    font-size: 30px;
+    color: #17DAA3;
   }
-  @keyframes animation-icon1 {
-    0% {
-      transform: translateY(270px);
-    }
-    50% {
-      transform: translateY(-200px);
-    }
-    100% {
-      transform: translateY(270px);
-    }
-  }
-  @keyframes animation-icon3 {
-    0% {
-      transform: translateY(-270px);
-    }
-    50% {
-      transform: translateY(200px);
-    }
-    100% {
-      transform: translateY(-270px);
-    }
-  }
-}
-
-@keyframes animation-icon5 {
-  0% {
-    transform: translateY(200px);
-  }
-  50% {
-    transform: translateY(-270px);
-  }
-  100% {
-    transform: translateY(200px);
-  }
-}
-
-.animation {
-  animation-name: none;
-  animation-duration: 1s;
-}
-
-.animation-icon1 {
-  animation-name: animation-icon1;
-  animation-direction: reverse;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-.animation-icon3 {
-  animation-name: animation-icon3;
-  animation-direction: reverse;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-.animation-icon5 {
-  animation-name: animation-icon5;
-  animation-direction: reverse;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
 }
 
 .projects {
