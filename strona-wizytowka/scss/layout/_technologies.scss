@@ -39,7 +39,7 @@
 .technologies-title {
   @include flex;
   @include flex-align(center, center);
-  color: #000;
+  color: #fff;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -110,6 +110,8 @@
   color: $color-cosmic-green; // to make variable
 }
 
+
+/* start code animation: move-around */
 @keyframes move-around {
   0% {
     transform: rotate(0deg);
@@ -126,6 +128,170 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+/* finish code animation: move-around */
+
+/* start code animation: change-icon-color */
+@keyframes change-icon-color {
+  0% {
+    color: $color-cosmic-green;
+  }
+
+  50% {
+    color: #fff;
+  }
+
+  100% {
+    color: $color-cosmic-green;
+  }
+}
+
+.change-icon-color {
+  animation-name: change-icon-color;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+/* finish code animation: change-icon-color */
+
+/* start code animation: .change-background-color */
+@keyframes change-background-color1 {
+  0% {
+    background-color: #000;
+  }
+
+  50% {
+    background-color: $color-cosmic-green;
+    border-color: #fff; 
+  }
+
+  100% {
+    background-color: #000;
+  }
+}
+
+@keyframes change-background-color2 {
+  0% {
+    background-color: #000;
+  }
+
+  50% {
+    background-color: $color-cosmic-green;
+    border-color: #fff;
+  }
+
+  100% {
+    background-color: #000;
+  }
+}
+
+@keyframes change-background-color3 {
+  0% {
+    background-color: #000;
+  }
+
+  50% {
+    background-color: $color-cosmic-green;
+    border-color: #fff;
+  }
+
+  100% {
+    background-color: #000;
+  }
+}
+
+@keyframes change-background-color4 {
+  0% {
+    background-color: #000;
+  }
+
+  50% {
+    background-color: $color-cosmic-green;
+    border-color: #fff;
+  }
+
+  100% {
+    background-color: #000;
+  }
+}
+
+@keyframes change-background-color5 {
+  0% {
+    background-color: #000;
+  }
+
+  50% {
+    background-color: $color-cosmic-green;
+    border-color: #fff;
+  }
+
+  100% {
+    background-color: #000;
+  }
+}
+
+@keyframes change-background-color6 {
+  0% {
+    background-color: #000;
+  }
+
+  50% {
+    background-color: $color-cosmic-green;
+    border-color: #fff;
+  }
+
+  100% {
+    background-color: #000;
+  }
+}
+
+.change-background-color1 {
+  animation-name: change-background-color1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.change-background-color2 {
+  animation-name: change-background-color2;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.change-background-color3 {
+  animation-name: change-background-color3;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.change-background-color4 {
+  animation-name: change-background-color4;
+  animation-duration: 5s;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.change-background-color5 {
+  animation-name: change-background-color5;
+  animation-duration: 5s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.change-background-color6 {
+  animation-name: change-background-color6;
+  animation-duration: 5s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* finish code animation: .change-background-color */
 
 @media all and (max-width: $medium) {
   .technologies-title {
