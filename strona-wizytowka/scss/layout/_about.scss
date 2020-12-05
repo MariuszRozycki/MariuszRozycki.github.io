@@ -1,6 +1,6 @@
 .about {
   width: 100%;
-  
+
   .wrapper-about-description {
     @include flex;
     @include flex-align(center, center);
@@ -34,20 +34,31 @@
     }
   }
 
-    @media all and (max-width: $large) {
-      .wrapper-about-description {
-        flex-direction: column;
+  @media all and (max-width: $large) {
+    .wrapper-about-description {
+      flex-direction: column;
 
-        .about-img-description-wrapper {
-          margin: 0 auto;
+      .about-img-description-wrapper {
+        margin: 0 auto 30px;
 
-          img {
-            margin-bottom: 50px;
-          }
-        } 
+        img {
+          margin-bottom: 50px;
+        }
       }
     }
   }
 
+  @media all and (max-width: $small) {
 
+    .wrapper-about-description {
+      width: 100%;
 
+      .about-img-description-wrapper img {
+        width: 200px;
+        height: auto;
+      }
+    }
+
+    
+  }
+}

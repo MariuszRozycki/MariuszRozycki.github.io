@@ -1,5 +1,5 @@
 .projects {
-
+  
   background-color: rgba(23, 218, 163, .2);
 
   ul li {
@@ -27,50 +27,165 @@
       }
     }
 
-    
-  }
-}
 
-
-
-/* #projects animations */
-
-@keyframes move-to-right-1 {
-  0% {
-    transform: translateX(0);
   }
 
-  50% {
-    transform: translateX(40px);
+
+
+
+  /* #projects animations */
+
+  @keyframes move-to-right-1 {
+    0% {
+      transform: translateX(0);
+    }
+
+    50% {
+      transform: translateX(40px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
   }
 
-  100% {
-    transform: translateX(0);
+  @keyframes move-to-right-2 {
+    0% {
+      transform: translateX(40px);
+    }
+
+    50% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(40px);
+    }
   }
-}
 
-@keyframes move-to-right-2 {
-  0% {
-    transform: translateX(40px);
+  .move-to-right-1 {
+    animation-name: move-to-right-1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
   }
 
-  50% {
-    transform: translateX(0);
+  .move-to-right-2 {
+    animation-name: move-to-right-2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
   }
 
-  100% {
-    transform: translateX(40px);
+  @media all and (max-width: $medium) {
+    ul li i {
+      margin-right: 45px;
+    }
+
+    ul li a {
+      font-size: 14px;
+      width: 80%;
+    }
+
+
+     @keyframes move-to-right-1 {
+       0% {
+         transform: translateX(0);
+       }
+
+       50% {
+         transform: translateX(30px);
+       }
+
+       100% {
+         transform: translateX(0);
+       }
+     }
+
+     @keyframes move-to-right-2 {
+       0% {
+         transform: translateX(30px);
+       }
+
+       50% {
+         transform: translateX(0);
+       }
+
+       100% {
+         transform: translateX(30px);
+       }
+     }
   }
-}
 
-.move-to-right-1 {
-  animation-name: move-to-right-1;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-}
+  @media all and (max-width: $small) {
 
-.move-to-right-2 {
-  animation-name: move-to-right-2;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+    ul {
+
+      li {
+
+        margin-left: 30px; 
+        margin-right: 30px; 
+
+        a {
+          width: 100%;
+          height: auto;
+          padding: 10px 15px;
+        }
+      }
+
+
+
+    }
+
+
+
+    @keyframes move-to-right-1 {
+      0% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(10px);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes move-to-right-2 {
+      0% {
+        transform: translateX(10px);
+      }
+
+      50% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(10px);
+      }
+    }
+  }
+
+  @media all and (max-width: $extra-small) {
+
+    ul {
+
+      li {
+
+        margin-left: 2px;
+        margin-right: 2px;
+
+        i {
+          display: none;
+        }
+
+        a {
+          width: 100%;
+          height: auto;
+          padding: 10px 15px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
 }
