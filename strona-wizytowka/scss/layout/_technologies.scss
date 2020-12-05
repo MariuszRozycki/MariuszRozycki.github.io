@@ -199,6 +199,10 @@
 
 
 @media all and (max-width: $medium) {
+  .technologies-title {
+    width: 100%;
+  }
+
   .wrapper-all-icons {
     width: 300px;
     height: 300px;

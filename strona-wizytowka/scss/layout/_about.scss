@@ -34,16 +34,20 @@
     }
   }
 
-@media all and (max-width: $large) {
-  .wrapper-about-description {
-    flex-direction: column;
+    @media all and (max-width: $large) {
+      .wrapper-about-description {
+        flex-direction: column;
 
-    img {
-      margin-bottom: 50px;
+        .about-img-description-wrapper {
+          margin: 0 auto;
+
+          img {
+            margin-bottom: 50px;
+          }
+        } 
+      }
     }
   }
-}
 
-}
 
 

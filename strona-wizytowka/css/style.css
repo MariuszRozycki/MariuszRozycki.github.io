@@ -448,7 +448,10 @@ i.fa-times {
   .about .wrapper-about-description {
     flex-direction: column;
   }
-  .about .wrapper-about-description img {
+  .about .wrapper-about-description .about-img-description-wrapper {
+    margin: 0 auto;
+  }
+  .about .wrapper-about-description .about-img-description-wrapper img {
     margin-bottom: 50px;
   }
 }
@@ -635,6 +638,9 @@ i.fa-times {
 }
 
 @media all and (max-width: 768px) {
+  .technologies-title {
+    width: 100%;
+  }
   .wrapper-all-icons {
     width: 300px;
     height: 300px;
