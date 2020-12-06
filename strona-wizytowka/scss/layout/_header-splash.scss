@@ -71,9 +71,10 @@
 
 i.fa-bars,
 i.fa-times {
+  position: fixed;
   display: none;
   font-size: 35px;
-  text-align: right;
+  right: 15px;
 }
 
 .navigation ul {
@@ -146,8 +147,6 @@ i.fa-times {
   }
 
   i.fa-bars {
-    position: absolute;
-    right: 0;
     display: block;
   }
 
@@ -161,14 +160,14 @@ i.fa-times {
 
   .navigation ul {
     display: none;
-    position: absolute;
+    position: fixed;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
     width: 300px;
     height: auto;
-    top: 60px;
-    right: 5px;
+    top: 80px;
+    right: 15px;
     margin: 0;
     padding: 20px;
     background-color: #000;

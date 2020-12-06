@@ -41,6 +41,36 @@
   // border-bottom: 3px solid #17DAA3;
 }
 
+.show-more {
+  @extend %btn;
+  border-radius: $border-radius-main;
+  background-color: black;
+  color: $color-cosmic-green;
+  border: 2px solid $color-cosmic-green;
+  font-size: 18px;
+  padding: 15px 30px;
+  margin: 20px auto;
+
+  &:hover {
+    transform: none;
+  }
+}
+
+.hide-description {
+  @extend %btn;
+  border-radius: $border-radius-main;
+  background-color: black;
+  color: $color-cosmic-green;
+  border: 2px solid $color-cosmic-green;
+  font-size: 18px;
+  padding: 15px 30px;
+  margin: 20px auto;
+
+  &:hover {
+    transform: none;
+  }
+}
+
 .btn-form {
   @extend %btn;
   border-radius: $border-radius-main;

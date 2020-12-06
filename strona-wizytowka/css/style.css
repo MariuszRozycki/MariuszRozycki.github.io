@@ -142,7 +142,6 @@ table {
   box-sizing: border-box;
 }
 
-/* Container */
 /* Mobile breakpoints */
 /* colors */
 /* border-radius */
@@ -155,7 +154,7 @@ body {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1200px;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -184,7 +183,7 @@ h3 {
   margin: 0 auto 96px;
 }
 
-.main-nav-btn, .btn, .btn-form {
+.main-nav-btn, .btn, .show-more, .hide-description, .btn-form {
   padding: 10px 15px 10px 15px;
   transition: 0.2s;
   border-radius: 50px;
@@ -193,7 +192,7 @@ h3 {
   outline-style: none;
 }
 
-.main-nav-btn:hover, .btn:hover, .btn-form:hover {
+.main-nav-btn:hover, .btn:hover, .show-more:hover, .hide-description:hover, .btn-form:hover {
   transform: translateY(-8%);
   box-shadow: 0 0 10px #17DAA3;
   border-bottom: 3px solid #17DAA3;
@@ -209,6 +208,34 @@ h3 {
   font-weight: 700;
   box-shadow: 0px 0px 25px white;
   /* optional */
+}
+
+.show-more {
+  border-radius: 20px;
+  background-color: black;
+  color: #17DAA3;
+  border: 2px solid #17DAA3;
+  font-size: 18px;
+  padding: 15px 30px;
+  margin: 20px auto;
+}
+
+.show-more:hover {
+  transform: none;
+}
+
+.hide-description {
+  border-radius: 20px;
+  background-color: black;
+  color: #17DAA3;
+  border: 2px solid #17DAA3;
+  font-size: 18px;
+  padding: 15px 30px;
+  margin: 20px auto;
+}
+
+.hide-description:hover {
+  transform: none;
 }
 
 .btn-form {
@@ -290,9 +317,10 @@ h3 {
 
 i.fa-bars,
 i.fa-times {
+  position: fixed;
   display: none;
   font-size: 35px;
-  text-align: right;
+  right: 15px;
 }
 
 .navigation ul {
@@ -359,8 +387,6 @@ i.fa-times {
     font-size: 50px;
   }
   i.fa-bars {
-    position: absolute;
-    right: 0;
     display: block;
   }
   i.fa-bars.hide {
@@ -371,14 +397,14 @@ i.fa-times {
   }
   .navigation ul {
     display: none;
-    position: absolute;
+    position: fixed;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
     width: 300px;
     height: auto;
-    top: 60px;
-    right: 5px;
+    top: 80px;
+    right: 15px;
     margin: 0;
     padding: 20px;
     background-color: #000;
@@ -436,6 +462,9 @@ i.fa-times {
 }
 
 .about .wrapper-about-description .wrapper-flex .about-img-description-wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
   height: auto;
   margin-right: 40px;
 }
@@ -444,9 +473,21 @@ i.fa-times {
   width: 300px;
   object-fit: cover;
   height: 200px;
-  border-radius: 50px;
-  border: 5px solid #17DAA3;
-  box-shadow: 0 0 20px #17DAA3;
+  border-radius: 20px;
+  border: none;
+}
+
+.about .wrapper-about-description .wrapper-flex .about-img-description-wrapper::after {
+  display: block;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: rgba(23, 218, 163, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  border: none;
 }
 
 .about .wrapper-about-description .wrapper-flex .about-img-description-wrapper:nth-of-type(1) {
@@ -472,6 +513,10 @@ i.fa-times {
   letter-spacing: 2px;
   text-align: justify;
   text-align-last: center;
+}
+
+.about .wrapper-about-description .show-more {
+  display: none;
 }
 
 @media all and (max-width: 992px) {
@@ -502,6 +547,24 @@ i.fa-times {
     animation-iteration-count: infinite;
     margin-bottom: 30px;
   }
+  .about .wrapper-about-description .about-description-height {
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .about .wrapper-about-description .about-description-height .about-description {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+  .about .wrapper-about-description .description-height-auto {
+    height: auto;
+  }
+  .about .wrapper-about-description .show-more {
+    display: block;
+  }
   @keyframes img-change {
     0% {
       background-image: url(https://i.postimg.cc/RC7NKpH7/profile-pict.jpg);
@@ -525,7 +588,11 @@ i.fa-times {
   .about .wrapper-about-description {
     width: 100%;
   }
-  .about .wrapper-about-description .about-img-description-wrapper img {
+  .about .wrapper-about-description .wrapper-flex .about-img-description-wrapper:nth-of-type(4) {
+    width: 200px;
+    height: 200px;
+  }
+  .about .wrapper-about-description .wrapper-flex .about-img-description-wrapper:nth-of-type(4) img {
     width: 200px;
     height: auto;
   }

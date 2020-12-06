@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  /* menu-hamburger */
   const hamburger = $('#hamburger');
   const times = $('#times');
   const menuOpen = $('#menu-open');
@@ -16,6 +17,53 @@ $(document).ready(function () {
     hamburger.fadeIn();
   });
 
+  /* about-description-height */
+  const aboutDescription = $('.about-description');
+  const aboutDescriptionHeight = $('.about-description-height');
+  const showMore = $('.show-more');
+  const autoHeight = $('.description-height-auto');
+
+
+  showMore.click(function () {
+
+    /* if ($(window).width() <= 992) {} Jak zbudowac warunaek w jquery, ktory przy roznych szerokosciach ekranu bedzie zmienial aboutDescriptionHeight.animate({
+      height: '550px', na rozne wysokosci, ktore beda ustalone przeze mnie?
+      Chodzi o to, ze animacja dziala fajnie - tak jak chcialem, ale przy zmianie szerokosci ekranu, te 550px, ustalone na sztywno jest nie wytarczajace, do tej dlugosci tekstu i musze to zmienic, ale nie moge stworzyc tego warunku.
+      Ewentualnie, jak mozna ustawic w animate({height: 'auto'}), bo takie rozwiazanie nie dziala.
+    }  */
+
+    aboutDescriptionHeight.animate({
+      height: '550px'
+    }, 500, function () {
+      aboutDescriptionHeight.after(showMore.hide());
+      const hideDescription = $('<button class="hide-description">Hide description</button>');
+      showMore.after(hideDescription);
+      console.log('hideDescription', hideDescription);
+      hideDescription.click(function () {
+        console.log('dziala');
+        aboutDescriptionHeight.animate({
+          height: '200px'
+        }, 500, function () {
+          aboutDescriptionHeight.after(hideDescription.hide(), showMore.show())
+        });
+      });
+    });
+  });
+
+  /* smooth scrolling */
+  $("a").on('click', function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 700, function () {
+        window.location.hash = hash;
+      });
+    }
+  });
+
+  /* form */
   const createAppointment = (appointment) => {
     console.log(appointment);
 
@@ -68,7 +116,7 @@ $(document).ready(function () {
       createAppointment(appointment);
     } else {
       appointmentMessage.classList.add('failure');
-      appointmentMessage.innerText = 'Wypełnij wymagane pole!';
+      appointmentMessage.innerText = 'Fill all empty fields!';
     }
   });
 });
