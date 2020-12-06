@@ -6,10 +6,11 @@
 
 
 @import 'utils/mixins';
+@import 'components/button';
 
 
 @import 'layout/header-splash';
 @import 'layout/about';
 @import 'layout/technologies';
 @import 'layout/projects';
-// @import 'layout/appointment';
+@import 'layout/appointment';

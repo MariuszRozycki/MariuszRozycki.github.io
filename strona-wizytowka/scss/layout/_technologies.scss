@@ -33,7 +33,7 @@
   border-radius: 50%;
   padding: 0;
   list-style: none;
-  // margin: 180px auto 0;
+
 }
 
 .technologies-title {
@@ -48,7 +48,7 @@
   font-size: 35px;
   padding: 20px;
   text-align: center;
-  border-radius: 50px;
+  border-radius: $border-radius-main;
   margin: 0 auto 100px;
 }
 
@@ -102,7 +102,7 @@
 
 .wrapper-icon-wp {
   -webkit-transform: rotate(300deg) translate(15em) rotate(-300deg);
-  transform: rotate(300deg) translate(15em) rotate(-30deg);
+  transform: rotate(300deg) translate(15em) rotate(-300deg);
 }
 
 .project-icon {
@@ -124,11 +124,35 @@
 
 .animation {
   animation-name: move-around;
-  animation-duration: 90s;
+  animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 /* finish code animation: move-around */
+
+/* start code animation-icons */
+// @keyframes animation-icons {
+//     0% {
+//       transform: rotate(0deg);
+//     }
+
+//     50% {
+//       transform: rotate(180deg);
+//     }
+
+//     100% {
+//       transform: rotate(360deg);
+//     }
+// }
+
+// .animation-icons {
+//   animation-name: animation-icons;
+//   animation-duration: 5s;
+//   animation-iteration-count: infinite;
+//   animation-timing-function: linear;
+// }
+/* finish code animation-icons */
+
 
 /* start code animation: change-icon-color */
 @keyframes change-icon-color {
@@ -151,6 +175,7 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+
 /* finish code animation: change-icon-color */
 
 /* start code animation: .change-background-color */
@@ -161,7 +186,7 @@
 
   50% {
     background-color: $color-cosmic-green;
-    border-color: #fff; 
+    border-color: #fff;
   }
 
   100% {
@@ -295,7 +320,7 @@
 
 @media all and (max-width: $medium) {
   .technologies-title {
-    width: 100%;
+    width: 90%;
   }
 
   .wrapper-all-icons {
@@ -318,135 +343,207 @@
     }
 
 
-      .wrapper-icon-html {
-        -webkit-transform: rotate(0deg) translate(10em);
-        transform: rotate(0deg) translate(9em);
-      }
-
-      .wrapper-icon-css {
-        -webkit-transform: rotate(60deg) translate(9em) rotate(-60deg);
-        transform: rotate(60deg) translate(9em) rotate(-60deg);
-      }
-
-      .wrapper-icon-js {
-        -webkit-transform: rotate(120deg) translate(9em);
-        transform: rotate(120deg) translate(9em);
-      }
-
-      .wrapper-icon-react {
-        -webkit-transform: rotate(-180deg) translate(9em) rotate(180deg);
-        transform: rotate(-180deg) translate(9em) rotate(180deg);
-      }
-
-      .wrapper-icon-git {
-        -webkit-transform: rotate(240deg) translate(9em) rotate(-240deg);
-        transform: rotate(240deg) translate(9em) rotate(-240deg);
-      }
-
-      .wrapper-icon-wp {
-        -webkit-transform: rotate(300deg) translate(9em) rotate(-300deg);
-        transform: rotate(300deg) translate(9em) rotate(-30deg);
-      }
-
-      .project-icon {
-        font-size: 40px;
-        color: $color-cosmic-green; // to make variable
-      }
-  }
-
-  @media all and (max-width: $small) {
-
-    .technologies-title {
-      width: auto;
-
+    .wrapper-icon-html {
+      -webkit-transform: rotate(0deg) translate(10em);
+      transform: rotate(0deg) translate(9em);
     }
 
-    .wrapper-all-icons {
-      width: 200px;
-      height: 200px;
-      border: 5px solid #17DAA3;
-      box-shadow: 0 0 50px #17DAA3;
-      border-radius: 50%;
-      @include flex;
-      @include flex-align(center, center);
-      position: relative;
-      border-radius: 50%;
-      padding: 0;
-      list-style: none;
+    .wrapper-icon-css {
+      -webkit-transform: rotate(60deg) translate(9em) rotate(-60deg);
+      transform: rotate(60deg) translate(9em) rotate(-60deg);
+    }
+
+    .wrapper-icon-js {
+      -webkit-transform: rotate(120deg) translate(9em);
+      transform: rotate(120deg) translate(9em);
+    }
+
+    .wrapper-icon-react {
+      -webkit-transform: rotate(-180deg) translate(9em) rotate(180deg);
+      transform: rotate(-180deg) translate(9em) rotate(180deg);
+    }
+
+    .wrapper-icon-git {
+      -webkit-transform: rotate(240deg) translate(9em) rotate(-240deg);
+      transform: rotate(240deg) translate(9em) rotate(-240deg);
+    }
+
+    .wrapper-icon-wp {
+      -webkit-transform: rotate(300deg) translate(9em) rotate(-300deg);
+      transform: rotate(300deg) translate(9em) rotate(-30deg);
+    }
+
+    .project-icon {
+      font-size: 40px;
+      color: $color-cosmic-green; // to make variable
     }
   }
+}
 
-  @media all and (max-width: $small) {
-    .technologies-title {
-      width: auto;
-      font-size: 20px;
-    }
+@media all and (max-width: $small) {
 
-    .wrapper-all-icons {
-      width: 200px;
-      height: 200px;
-      border: 5px solid #17DAA3;
-      box-shadow: 0 0 50px #17DAA3;
-      border-radius: 50%;
+  .technologies-title {
+    width: auto;
+
+  }
+
+  .wrapper-all-icons {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #17DAA3;
+    box-shadow: 0 0 50px #17DAA3;
+    border-radius: 50%;
+    @include flex;
+    @include flex-align(center, center);
+    position: relative;
+    border-radius: 50%;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+@media all and (max-width: $small) {
+  .technologies-title {
+    width: auto;
+    font-size: 20px;
+  }
+
+  .wrapper-all-icons {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #17DAA3;
+    box-shadow: 0 0 50px #17DAA3;
+    border-radius: 50%;
+    @include flex;
+    @include flex-align(center, center);
+    position: relative;
+    border-radius: 50%;
+    padding: 0;
+    list-style: none;
+
+    .wrapper-icon {
       @include flex;
       @include flex-align(center, center);
-      position: relative;
+      width: 70px;
+      height: 70px;
+      border: 5px solid #17DAA3; // to make variable
+      box-shadow: 0 0 10px #17DAA3;
       border-radius: 50%;
-      padding: 0;
-      list-style: none;
-
-      .wrapper-icon {
-        @include flex;
-        @include flex-align(center, center);
-        width: 70px;
-        height: 70px;
-        border: 5px solid #17DAA3; // to make variable
-        box-shadow: 0 0 10px #17DAA3;
-        border-radius: 50%;
-        background-color: #000; // to make variable
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -3em;
+      background-color: #000; // to make variable
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -2em;
 
 
-      }
+    }
 
-      .wrapper-icon-html {
-        -webkit-transform: rotate(0deg) translate(7em);
-        transform: rotate(0deg) translate(7em);
-      }
+    .wrapper-icon-html {
+      -webkit-transform: rotate(0deg) translate(6em);
+      transform: rotate(0deg) translate(6em);
+    }
 
-      .wrapper-icon-css {
-        -webkit-transform: rotate(60deg) translate(7em) rotate(-60deg);
-        transform: rotate(60deg) translate(7em) rotate(-60deg);
-      }
+    .wrapper-icon-css {
+      -webkit-transform: rotate(60deg) translate(6em) rotate(-60deg);
+      transform: rotate(60deg) translate(6em) rotate(-60deg);
+    }
 
-      .wrapper-icon-js {
-        -webkit-transform: rotate(120deg) translate(6em);
-        transform: rotate(120deg) translate(6em);
-      }
+    .wrapper-icon-js {
+      -webkit-transform: rotate(120deg) translate(6em);
+      transform: rotate(120deg) translate(6em);
+    }
 
-      .wrapper-icon-react {
-        -webkit-transform: rotate(-180deg) translate(6em) rotate(180deg);
-        transform: rotate(-180deg) translate(6em) rotate(180deg);
-      }
+    .wrapper-icon-react {
+      -webkit-transform: rotate(-180deg) translate(6em) rotate(180deg);
+      transform: rotate(-180deg) translate(6em) rotate(180deg);
+    }
 
-      .wrapper-icon-git {
-        -webkit-transform: rotate(240deg) translate(6em) rotate(-240deg);
-        transform: rotate(240deg) translate(6em) rotate(-240deg);
-      }
+    .wrapper-icon-git {
+      -webkit-transform: rotate(240deg) translate(6em) rotate(-240deg);
+      transform: rotate(240deg) translate(6em) rotate(-240deg);
+    }
 
-      .wrapper-icon-wp {
-        -webkit-transform: rotate(300deg) translate(6em) rotate(-300deg);
-        transform: rotate(300deg) translate(6em) rotate(-30deg);
-      }
+    .wrapper-icon-wp {
+      -webkit-transform: rotate(300deg) translate(6em) rotate(-300deg);
+      transform: rotate(300deg) translate(6em) rotate(-300deg);
+    }
 
-      .project-icon {
-        font-size: 30px;
-        color: $color-cosmic-green; // to make variable
-      }
+    .project-icon {
+      font-size: 30px;
+      color: $color-cosmic-green; // to make variable
+    }
 
+  }
+}
+
+@media all and (max-width: $xx-small) {
+  .technologies-title {
+    width: auto;
+    font-size: 18px;
+  }
+
+  .wrapper-all-icons {
+    width: 160px;
+    height: 160px;
+    border: 5px solid #17DAA3;
+    box-shadow: 0 0 50px #17DAA3;
+    border-radius: 50%;
+    @include flex;
+    @include flex-align(center, center);
+    position: relative;
+    border-radius: 50%;
+    padding: 0;
+    list-style: none;
+    position: relative;
+
+    .wrapper-icon {
+      @include flex;
+      @include flex-align(center, center);
+      width: 50px;
+      height: 50px;
+      border: 5px solid #17DAA3; // to make variable
+      box-shadow: 0 0 10px #17DAA3;
+      border-radius: 50%;
+      background-color: #000; // to make variable
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -1.5em;
+    }
+
+    .wrapper-icon-html {
+      -webkit-transform: rotate(0deg) translate(5em);
+      transform: rotate(0deg) translate(5em);
+    }
+
+    .wrapper-icon-css {
+      -webkit-transform: rotate(60deg) translate(5em) rotate(-60deg);
+      transform: rotate(60deg) translate(5em) rotate(-60deg);
+    }
+
+    .wrapper-icon-js {
+      -webkit-transform: rotate(120deg) translate(5em);
+      transform: rotate(120deg) translate(5em);
+    }
+
+    .wrapper-icon-react {
+      -webkit-transform: rotate(-180deg) translate(5em) rotate(180deg);
+      transform: rotate(-180deg) translate(5em) rotate(180deg);
+    }
+
+    .wrapper-icon-git {
+      -webkit-transform: rotate(240deg) translate(5em) rotate(-240deg);
+      transform: rotate(240deg) translate(5em) rotate(-240deg);
+    }
+
+    .wrapper-icon-wp {
+      -webkit-transform: rotate(300deg) translate(5em) rotate(-300deg);
+      transform: rotate(300deg) translate(5em) rotate(-300deg);
+    }
+
+    .project-icon {
+      font-size: 27px;
+      color: $color-cosmic-green; // to make variable
     }
   }
 }
