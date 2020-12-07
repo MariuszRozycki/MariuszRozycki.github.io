@@ -26,14 +26,11 @@ $(document).ready(function () {
 
   showMore.click(function () {
     
-    /* if ($(window).width() <= 992) {} Jak zbudowac warunaek w jquery, ktory przy roznych szerokosciach ekranu bedzie zmienial aboutDescriptionHeight.animate({
-      height: '550px', na rozne wysokosci, ktore beda ustalone przeze mnie?
-      Chodzi o to, ze animacja dziala fajnie - tak jak chcialem, ale przy zmianie szerokosci ekranu, te 550px, ustalone na sztywno jest nie wytarczajace, do tej dlugosci tekstu i musze to zmienic, ale nie moge stworzyc tego warunku.
-      Ewentualnie, jak mozna ustawic w animate({height: 'auto'}), bo takie rozwiazanie nie dziala.
-    }  */
+    let aboutDescriptionHeightContainer = aboutDescription.height();
+    console.log(aboutDescriptionHeightContainer);
     
     aboutDescriptionHeight.animate({
-      height: '550px'
+      height: aboutDescriptionHeightContainer
     }, 500, function () {
       aboutDescriptionHeight.after(showMore.hide());
       const hideDescription = $('<button class="hide-description">Hide description</button>');

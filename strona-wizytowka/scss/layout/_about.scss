@@ -16,7 +16,7 @@
         top: 0;
         left: 0;
         height: auto;
-        margin-right: 40px;
+        padding-right: 40px;
 
         img {
           width: 300px;
@@ -57,14 +57,18 @@
       }
     }
 
-    .about-description {
+    .about-description-height {
       flex-basis: 70%;
-      font-size: 24px;
-      font-weight: 300;
-      letter-spacing: 2px;
-      text-align: justify;
-      text-align-last: center;
+
+      .about-description {
+        font-size: 24px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-align: justify;
+        text-align-last: center;
+      }
     }
+
 
     .show-more {
       display: none;
