@@ -83,7 +83,7 @@ $(document).ready(function () {
         console.log(resJSON);
         appointmentMessage.classList.add('send');
         appointmentMessage.classList.remove('failure');
-        appointmentMessage.innerText = `Dziękujemy ${resJSON.appointment.name}. You are signed up!`;
+        appointmentMessage.innerText = `Thank you ${resJSON.appointment.name}. You are signed up!`;
       });
   }
 
