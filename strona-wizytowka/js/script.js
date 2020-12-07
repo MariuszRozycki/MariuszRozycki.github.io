@@ -22,16 +22,16 @@ $(document).ready(function () {
   const aboutDescriptionHeight = $('.about-description-height');
   const showMore = $('.show-more');
   const autoHeight = $('.description-height-auto');
-
+  
 
   showMore.click(function () {
-
+    
     /* if ($(window).width() <= 992) {} Jak zbudowac warunaek w jquery, ktory przy roznych szerokosciach ekranu bedzie zmienial aboutDescriptionHeight.animate({
       height: '550px', na rozne wysokosci, ktore beda ustalone przeze mnie?
       Chodzi o to, ze animacja dziala fajnie - tak jak chcialem, ale przy zmianie szerokosci ekranu, te 550px, ustalone na sztywno jest nie wytarczajace, do tej dlugosci tekstu i musze to zmienic, ale nie moge stworzyc tego warunku.
       Ewentualnie, jak mozna ustawic w animate({height: 'auto'}), bo takie rozwiazanie nie dziala.
     }  */
-
+    
     aboutDescriptionHeight.animate({
       height: '550px'
     }, 500, function () {
@@ -58,7 +58,7 @@ $(document).ready(function () {
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 700, function () {
-        window.location.hash = hash;
+          window.location.hash = hash;
       });
     }
   });
@@ -69,6 +69,7 @@ $(document).ready(function () {
 
     const appointmentMessage = document.querySelector('.appointment-message');
 
+    // Jaki backend
     fetch('https://akademia108.pl/api/ajax/post-appointment.php', {
         headers: {
           'Content-Type': 'application/json',
@@ -82,7 +83,7 @@ $(document).ready(function () {
         console.log(resJSON);
         appointmentMessage.classList.add('send');
         appointmentMessage.classList.remove('failure');
-        appointmentMessage.innerText = `Dziękujemy ${resJSON.appointment.name}. Zostałeś zapisany!`;
+        appointmentMessage.innerText = `Dziękujemy ${resJSON.appointment.name}. You are signed up!`;
       });
   }
 
@@ -116,7 +117,7 @@ $(document).ready(function () {
       createAppointment(appointment);
     } else {
       appointmentMessage.classList.add('failure');
-      appointmentMessage.innerText = 'Fill all empty fields!';
+      appointmentMessage.innerText = 'Fill up all empty fields!';
     }
   });
 });

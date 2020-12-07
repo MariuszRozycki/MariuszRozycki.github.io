@@ -128,16 +128,16 @@
     <div class="container">
       <h3>Contact me</h3>
       <div class="emphasis-line"></div>
-      <form id="appointment-form">
+      <form id="appointment-form" action="https://formspree.io/f/xnqogare" method="POST">
         <input type="text" name="name" placeholder="Name" id="appointment-name" class="form-field">
-        <input type="email" name="email" placeholder="Email" id="appointment-email" class="form-field">
+        <input type="email" name="_replyto" placeholder="Email" id="appointment-email" class="form-field">
 
         <input type="text" name="city" placeholder="City" id="appointment-city" class="form-field">
 
         <input type="tel" name="phone" placeholder="Phone" id="appointment-phone" class="form-field">
 
         <textarea name="message" id="appointment-message" placeholder="Your note" class="form-field"></textarea>
-        <button type="submit" class="btn-form">Make an appointment</button>
+        <button type="submit" class="btn-form" value="Send">Make an appointment</button>
         <p class="appointment-message"></p>
 
       </form>
