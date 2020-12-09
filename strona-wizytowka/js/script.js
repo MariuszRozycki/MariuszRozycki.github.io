@@ -66,8 +66,7 @@ $(document).ready(function () {
 
     const appointmentMessage = document.querySelector('.appointment-message');
 
-    // Jaki backend
-    fetch('https://akademia108.pl/api/ajax/post-appointment.php', {
+    fetch('https://formspree.io/f/xnqogare', {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -80,7 +79,7 @@ $(document).ready(function () {
         console.log(resJSON);
         appointmentMessage.classList.add('send');
         appointmentMessage.classList.remove('failure');
-        appointmentMessage.innerText = `Thank you ${resJSON.appointment.name}. You are signed up!`;
+        appointmentMessage.innerText = `Thank you ${appointment.name}. Your message is sent!`;
       });
   }
 

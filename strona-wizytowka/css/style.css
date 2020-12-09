@@ -389,7 +389,6 @@ i.fa-times {
   }
 }
 
-/* NIE RUSZAC */
 @media all and (max-width: 768px) {
   .splash-inner h1 {
     font-size: 50px;
@@ -448,6 +447,21 @@ i.fa-times {
   }
   .splash-inner h1 span {
     letter-spacing: 0;
+  }
+}
+
+@media all and (max-width: 360px) {
+  .navigation ul {
+    width: 90%;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .splash-inner h1 {
+    font-size: 32px;
+  }
+  .splash-inner h2 {
+    font-size: 19px;
   }
 }
 
