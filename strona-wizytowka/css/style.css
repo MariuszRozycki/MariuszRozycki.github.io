@@ -536,6 +536,9 @@ i.fa-times {
     flex-direction: column;
     align-items: center;
   }
+  .about .wrapper-about-description .wrapper-flex {
+    padding-right: 0;
+  }
   .about .wrapper-about-description .wrapper-flex .about-img-description-wrapper {
     margin: 0 auto 20px;
   }

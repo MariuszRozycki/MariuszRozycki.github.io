@@ -84,8 +84,11 @@
 
 
       .wrapper-flex {
+        padding-right: 0;
+
         .about-img-description-wrapper {
           margin: 0 auto 20px;
+          
         }
 
         .about-img-description-wrapper:nth-of-type(1) {
