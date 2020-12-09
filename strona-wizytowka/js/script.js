@@ -30,7 +30,7 @@ $(document).ready(function () {
     console.log(aboutDescriptionHeightContainer);
     
     aboutDescriptionHeight.animate({
-      height: aboutDescriptionHeightContainer
+      flexBasis: aboutDescriptionHeightContainer
     }, 500, function () {
       aboutDescriptionHeight.after(showMore.hide());
       const hideDescription = $('<button class="hide-description">Hide description</button>');
@@ -39,7 +39,7 @@ $(document).ready(function () {
       hideDescription.click(function () {
         console.log('dziala');
         aboutDescriptionHeight.animate({
-          height: '200px'
+          flexBasis: '200px'
         }, 500, function () {
           aboutDescriptionHeight.after(hideDescription.hide(), showMore.show())
         });
