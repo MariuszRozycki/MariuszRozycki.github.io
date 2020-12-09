@@ -17,24 +17,56 @@ $(document).ready(function () {
     hamburger.fadeIn();
   });
 
+
+  /* choose language */
+  const chooseLang = $('#choose-lang');
+  const langForm = $('#lang-form');
+
+  chooseLang.click(function (){
+    langForm.css('visibility', 'visible');
+  });
+
+  chooseLang.click(function(){
+    langForm.fadeIn(550);
+  });
+
+  const norway = $('#norway');
+  const poland = $('#poland');
+  const unitedKingdom = $('#united-kingdom');
+
+  console.log(norway);
+  console.log(poland);
+  console.log(unitedKingdom);
+
+  poland.click(function () {
+    langForm.fadeOut(550);
+  });
+
+  unitedKingdom.click(function (e) {
+    langForm.fadeOut(550);
+  });
+
+
+
+
   /* about-description-height */
   const aboutDescription = $('.about-description');
   const aboutDescriptionHeight = $('.about-description-height');
   const showMore = $('.show-more');
   const autoHeight = $('.description-height-auto');
-  
+
 
   showMore.click(function () {
-    
+
     let aboutDescriptionHeightContainer = aboutDescription.height();
     console.log(aboutDescriptionHeightContainer);
-    
+
     aboutDescriptionHeight.animate({
       flexBasis: aboutDescriptionHeightContainer
     }, 500, function () {
       aboutDescriptionHeight.after(showMore.hide());
-      const hideDescription = $('<button class="hide-description">Hide description</button>');
-      showMore.after(hideDescription);
+      const hideDescription = $('.hide-description');
+      showMore.after(hideDescription.css('display', 'block'));
       console.log('hideDescription', hideDescription);
       hideDescription.click(function () {
         console.log('dziala');
@@ -55,7 +87,7 @@ $(document).ready(function () {
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 700, function () {
-          window.location.hash = hash;
+        window.location.hash = hash;
       });
     }
   });

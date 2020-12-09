@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
   <meta charset="UTF-8">
@@ -13,23 +13,23 @@
     <div class="container">
       <nav class="navigation">
         <div class="logo">
-          <a class="logo" href="#">WebDeveloper<span>.</span></a>
+          <a class="logo" href="#">Programista<span>.</span></a>
         </div>
         <i id="hamburger" class="fas fa-bars"></i>
         <i id="times" class="fas fa-times"></i>
         <ul id="menu-open">
 
-          <li class="menu-item"><a href="#about" class="main-nav-btn">about me</a></li>
-          <li class="menu-item"><a href="#technologies" class="main-nav-btn">technologies</a></li>
-          <li class="menu-item"><a href="#projects" class="main-nav-btn">projects</a></li>
-          <li class="menu-item"><a href="#appointment" class="main-nav-btn">contact</a></li>
+          <li class="menu-item"><a href="#about" class="main-nav-btn">o mnie</a></li>
+          <li class="menu-item"><a href="#technologies" class="main-nav-btn">technologie</a></li>
+          <li class="menu-item"><a href="#projects" class="main-nav-btn">projekty</a></li>
+          <li class="menu-item"><a href="#appointment" class="main-nav-btn">kontakt</a></li>
         </ul>
       </nav>
       <div class="splash-inner">
         <h1 class="page-title"><span>Mariusz Rozycki</span> - frontend developer</h1>
-        <h2 class="page-subtitle">portfolio website</h2>
+        <h2 class="page-subtitle">moje portfolio</h2>
+        <a href="#" class="btn" id="choose-lang">Wybierz język</a>
 
-        <a href="#" class="btn" id="choose-lang">Choose language</a>
         <div class="lang-form" id="lang-form">
           <a href="index-no.html" class="img-lang-wrapper">
             <img src="../img/norway.png" id="norway">
@@ -47,7 +47,7 @@
 
   <section id="about" class="about">
     <div class="container">
-      <h3>About me</h3>
+      <h3>O mnie</h3>
       <div class="emphasis-line"></div>
       <div class="wrapper-about-description">
         <div class="wrapper-flex">
@@ -64,18 +64,13 @@
           </div>
         </div>
         <div class="about-description-height">
-          <p class="about-description">Hi! My name is Mariusz Grzegorz Rozycki. I live in Norway since 2008. I studied
-            education in Poland since 2003 - 2008. In 2008 I have moved to Norway and started to live here. At
-            the
-            begining I worked in restaurant, later - I mean from 2012 I've startet to work as buss driver and instructor
-            for buss drivers, but all of those proffesions was boring:) In 2018 i got interesed of building websites and
-            web
-            applications. Now in 2020 in december I've almost finished course for programmers where i studied HTML, CSS,
-            JavaScript, Jquery and React. I wish to begin work in some IT company, where will I get possibility to start
-            my carrer in IT. I wish to show YOU i've got potential to build interesting projects.</p>
+          
+          <p class="about-description">
+            Cześć. Mam na imię Mariusz Różycki. Mieszkam w Norwegii od 2008 roku. W Polsce studiowałem pedagogikę od 2003 do 2008 roku. W 2008 roku przeprowadziłem się do Norwegii. Na początku pracowałem w restauracji, a później od 2012 roku zacząłem pracować jako kierowca autobusu w Oslo i instruktor dla nowych kierowców. Wszystkie te wykonywane zawody były nudne :) W 2018 roku zainteresowałem się programowaniem, a w szczególnośći budowaniem stron internetowych i aplikacji webowych. Teraz w grudniu 2020 roku kończę kurs programowania, gdzie uczyłem się takich technologii jak> HTML, CSS, JavaScript, JQuery, React. Chcę rozpocząć pracę w dobrej firmie IT, a ta strona jest po to, żeby pokazać Ci moje projekty :)    
+            </p>
         </div>
-        <button class="show-more">Show more</button>
-        <button class="hide-description">Show less</button>
+        <button class="show-more">Wiecej...</button>
+        <button class="hide-description">Mniej...</button>
       </div>
     </div>
   </section>
@@ -83,7 +78,7 @@
   <section id="technologies" class="technologies">
     <div class="container">
 
-      <h3 class="technologies-title change-icon-color change-background-color1">Technoligies I work with</h3>
+      <h3 class="technologies-title change-icon-color change-background-color1">Technologie, z którymi pracuję</h3>
 
       <div class="wrapper-all-icons animation">
 
@@ -117,17 +112,17 @@
 
   <section id="projects" class="projects">
     <div class="container">
-      <h3>Projects</h3>
+      <h3>Moje projekty</h3>
       <div class="emphasis-line"></div>
       <ul class="wrapper-all-projects">
         <li><i
             class="fas fa-arrow-right move-to-right-1"></i><a href="http://olenasbeautyoslo.com/" target="_blank">Olena's Beauty</a>
         </li>
         <li><i
-            class="fas fa-arrow-right move-to-right-2"></i><a href="http://MariuszRozycki.github.io/zadanie-dodatkowe/kalkulator/">Calculator</a>
+            class="fas fa-arrow-right move-to-right-2"></i><a href="http://MariuszRozycki.github.io/zadanie-dodatkowe/kalkulator/">Kalkulator</a>
         </li>
         <li><i
-            class="fas fa-arrow-right move-to-right-1"></i><a href="https://repl.it/@mariansc83/delta#script.js">Count delta quadrant</a>
+            class="fas fa-arrow-right move-to-right-1"></i><a href="https://repl.it/@mariansc83/delta#script.js">Oblicz deltę funkcji kwadratowej</a>
         </li>
         <li><i
             class="fas fa-arrow-right move-to-right-2"></i><a href="https://mariuszrozycki.github.io/creatively/">Creatively web</a>
@@ -138,7 +133,7 @@
 
   <section id="appointment" class="appointment">
     <div class="container">
-      <h3>Contact me</h3>
+      <h3>Skontaktuj się ze mną</h3>
       <div class="emphasis-line"></div>
       <form id="appointment-form" action="https://formspree.io/f/xnqogare" method="POST">
         <input type="text" name="name" placeholder="Name" id="appointment-name" class="form-field">
@@ -149,7 +144,7 @@
         <input type="tel" name="phone" placeholder="Phone" id="appointment-phone" class="form-field">
 
         <textarea name="message" id="appointment-message" placeholder="Your note" class="form-field"></textarea>
-        <button type="submit" id="appointment-submit" class="btn-form" value="Send">Send message</button>
+        <button type="submit" id="appointment-submit" class="btn-form" value="Send">Wyślij wiadomość</button>
         <p class="appointment-message"></p>
       </form>
     </div>
@@ -158,9 +153,9 @@
   <footer id="footer" class="footer">
     <div class="container footer-flex">
       <div class="footer-icons-wrapper">
-        <a href=""><i class="fab fa-facebook-messenger"></i>Write to me</a>
-        <a href="mailto:mariansc83@gmail.com" ><i class="fas fa-envelope"></i>Send me a mail</a>
-        <a href="tel:004793928270"><i class="fas fa-phone-square-alt"></i>Call me: +47 939 28 720</a>
+        <a href=""><i class="fab fa-facebook-messenger"></i>Napisz do mnie</a>
+        <a href="mailto:mariansc83@gmail.com" ><i class="fas fa-envelope"></i>Wyślij maila</a>
+        <a href="tel:004793928270"><i class="fas fa-phone-square-alt"></i>Zadzwoń do mnie: +47 939 28 720</a>
       </div>
       <div class="all-rights">
         <p>&copy; Mariusz Rozycki</p>
