@@ -250,7 +250,7 @@ h3 {
 
 /* splash */
 .splash {
-  background: url(https://i.postimg.cc/6qhkzVTT/aurora-borealis-photo-1933318.jpg);
+  background: url("../img/bcg-header.jpg");
   height: 100vh;
   width: 100%;
   background-position: center;
@@ -596,19 +596,19 @@ i.fa-times {
   }
   @keyframes img-change {
     0% {
-      background-image: url(https://i.postimg.cc/RC7NKpH7/profile-pict.jpg);
+      background-image: url("../img/profile-pict.jpg");
     }
     33% {
-      background-image: url(https://i.postimg.cc/XYmVT95N/profile-pict-2.jpg);
+      background-image: url("../img/profile-pict-2.jpg");
     }
     66% {
-      background-image: url(https://i.postimg.cc/pLFN549x/profile-pict-3.jpg);
+      background-image: url("../img/profile-pict-3.jpg");
     }
     99% {
-      background-image: url(https://i.postimg.cc/RC7NKpH7/profile-pict.jpg);
+      background-image: url("../img/profile-pict-2.jpg");
     }
     100% {
-      background-image: url(https://i.postimg.cc/RC7NKpH7/profile-pict.jpg);
+      background-image: url("../img/profile-pict.jpg");
     }
   }
 }
@@ -629,7 +629,7 @@ i.fa-times {
 
 .technologies {
   height: auto;
-  background-image: url(https://i.postimg.cc/G2N1zPTr/bcg-projects.jpg);
+  background-image: url("../img/bcg-technologies.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1099,7 +1099,7 @@ i.fa-times {
 
 .projects ul li a {
   color: black;
-  width: 50%;
+  width: auto;
   font-size: 24px;
   padding: 10px 30px;
   border-radius: 20px;
@@ -1153,7 +1153,6 @@ i.fa-times {
     margin-right: 45px;
   }
   .projects ul li a {
-    font-size: 14px;
     width: 80%;
   }
   @keyframes move-to-right-1 {
@@ -1189,6 +1188,9 @@ i.fa-times {
     width: 100%;
     height: auto;
     padding: 10px 15px;
+  }
+  .projects ul li a:hover {
+    transform: none;
   }
   @keyframes move-to-right-1 {
     0% {
@@ -1249,7 +1251,7 @@ i.fa-times {
 }
 
 .appointment {
-  background-image: url(https://i.postimg.cc/TP50h8t6/pexels-tobias-bj-rkli-2113565.jpg);
+  background-image: url("../img/bcg-appointment.jpg");
   background-position: center;
   background-size: cover;
   background-color: no-repeat;
