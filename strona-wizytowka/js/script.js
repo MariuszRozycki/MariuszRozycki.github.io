@@ -80,17 +80,23 @@ $(document).ready(function () {
   });
 
   /* smooth scrolling */
-  $("a").on('click', function (event) {
-    if (this.hash !== "") {
-      event.preventDefault();
-      var hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 700, function () {
-        window.location.hash = hash;
-      });
-    }
-  });
+
+  const links = document.querySelectorAll(".navigation ul li a");
+
+  for (const link of links) {
+    link.addEventListener("click", clickHandler);
+  }
+
+  function clickHandler(e) {
+    e.preventDefault();
+    const href = this.getAttribute("href");
+    const offsetTop = document.querySelector(href).offsetTop;
+
+    scroll({
+      top: offsetTop,
+      behavior: "smooth"
+    });
+  }
 
   /* form */
   const createAppointment = (appointment) => {
@@ -131,7 +137,7 @@ $(document).ready(function () {
 
 
   const appointemntForm = document.getElementById('appointment-form');
-  
+
   appointemntForm.addEventListener('submit', function (event) {
     event.preventDefault();
     const appointmentPhone = document.getElementById('appointment-phone');
@@ -147,12 +153,12 @@ $(document).ready(function () {
     }
 
 
-      
+
 
     for (let i = 0; i < formFields.length; i++) {
 
       console.log(formFields[3]);
-     
+
       if (formFields[i].value === '') {
         ++fieldsErrors;
         formFields[i].classList.add('failure');
