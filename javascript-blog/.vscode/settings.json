@@ -1,0 +1,5 @@
+{
+  "sass.lint.enable": true,
+  "editor.wrappingIndent": "none",
+  "liveServer.settings.port": 5501
+}
