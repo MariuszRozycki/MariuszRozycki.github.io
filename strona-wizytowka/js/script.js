@@ -131,9 +131,10 @@ $(document).ready(function () {
 
 
   const appointemntForm = document.getElementById('appointment-form');
-
+  
   appointemntForm.addEventListener('submit', function (event) {
     event.preventDefault();
+    const appointmentPhone = document.getElementById('appointment-phone');
     const appointmentMessage = document.querySelector('.appointment-message');
     let formFields = document.getElementsByClassName('form-field');
     let fieldsErrors = 0;
@@ -142,12 +143,16 @@ $(document).ready(function () {
       email: document.getElementById('appointment-email').value,
       city: document.getElementById('appointment-city').value,
       phone: document.getElementById('appointment-phone').value,
-      message: document.getElementById('appointment-message').value
+      message: document.getElementById('appointment-message').value,
     }
 
 
+      
+
     for (let i = 0; i < formFields.length; i++) {
-      console.log(formFields[i].value);
+
+      console.log(formFields[3]);
+     
       if (formFields[i].value === '') {
         ++fieldsErrors;
         formFields[i].classList.add('failure');
@@ -166,12 +171,16 @@ $(document).ready(function () {
 
       if (htmlAttr === 'pl') {
         appointmentMessage.innerText = `Proszę, wypełnij wszystkie puste pola!`;
+
       } else if (htmlAttr === 'en') {
         appointmentMessage.innerText = `Fill up all empty fields!`;
       } else {
         appointmentMessage.innerText = `Vennligst fyll ut alle feltene!`;
       }
-      // appointmentMessage.innerText = 'Fill up all empty fields!';
     }
+
+
+
+
   });
 });
