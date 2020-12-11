@@ -81,22 +81,18 @@ $(document).ready(function () {
 
   /* smooth scrolling */
 
-  const links = document.querySelectorAll(".navigation ul li a");
-
-  for (const link of links) {
-    link.addEventListener("click", clickHandler);
-  }
-
-  function clickHandler(e) {
-    e.preventDefault();
-    const href = this.getAttribute("href");
-    const offsetTop = document.querySelector(href).offsetTop;
-
-    scroll({
-      top: offsetTop,
-      behavior: "smooth"
-    });
-  }
+  $("a").on('click', function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 700, function () {
+        window.location.hash = hash;
+      });
+    }
+  });
+  
 
   /* form */
   const createAppointment = (appointment) => {
@@ -133,6 +129,8 @@ $(document).ready(function () {
           appointmentMessage.innerText = `Takk ${appointment.name}. Meldingen din er sendt!`;
         }
       });
+
+      
   }
 
 
@@ -152,7 +150,7 @@ $(document).ready(function () {
       message: document.getElementById('appointment-message').value,
     }
 
-
+console.log(typeof appointment.phone.value);
 
 
     for (let i = 0; i < formFields.length; i++) {
