@@ -1,30 +1,49 @@
 .projects {
 
-  background-color: rgba(23, 218, 163, .2);
+  h3 {
+    color: $color-cosmic-green;
+  }
 
-  ul li {
-    list-style: none;
-    @include flex;
-    @include flex-align (flex-start, center);
-    margin: 30px auto;
+  background-color: #000;
 
-    i {
-      margin-right: 60px;
-      font-size: 2em;
-    }
+  ul {
+    
+    li {
+      list-style: none;
+      @include flex;
+      @include flex-align (flex-start, center);
+      margin: 30px auto;
+      flex-basis: 80%;
+    
+           
 
-    a {
-      color: black;
-      width: auto;
-      font-size: 24px;
-      padding: 10px 30px;
-      border-radius: 20px;
-      box-shadow: 0 0 50px #17DAA3;
-      background-color: #17DAA3;
-      transition: .2s;
+      i {
+        margin-right: 60px;
+        font-size: 2em;
+        width: 10%;
+        color: $color-cosmic-green;
+      }
 
-      &:hover {
-        transform: translateX(30px);
+      a {
+        display: block;
+        text-align: left;
+        color: $color-cosmic-green;
+        flex-basis: 100%;
+        font-size: 24px;
+        padding: 10px 30px;
+        border-radius: 20px;
+        background-color: #000;
+        border: 2px solid;
+        transition: .2s;
+        
+
+        &:hover {
+          background-color: $color-cosmic-green;
+          color: #000;
+          border: 2px solid $color-cosmic-green;
+          transform: translateY(-2px);
+          box-shadow: 0 0 50px $color-cosmic-green;
+        }
       }
     }
   }
@@ -116,6 +135,10 @@
 
       li {
 
+        i {
+          display: none;
+        }
+
         margin-left: 10px;
         margin-right: 10px;
 
@@ -191,21 +214,6 @@
           width: 100%;
           height: auto;
           padding: 10px 15px;
-        }
-      }
-    }
-  }
-
-  @media all and (max-width: 300px) {
-    ul {
-
-      li {
-
-        margin-left: 1px;
-        margin-right: 2px;
-
-        i {
-          display: none;
         }
       }
     }
