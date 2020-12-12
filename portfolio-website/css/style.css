@@ -1126,6 +1126,10 @@ i.fa-times {
   color: #17DAA3;
 }
 
+.projects h3.github-links {
+  padding-top: 96px;
+}
+
 .projects ul li {
   list-style: none;
   display: flex;
