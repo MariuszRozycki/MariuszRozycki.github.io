@@ -577,6 +577,7 @@ i.fa-times {
   letter-spacing: 2px;
   text-align: justify;
   text-align-last: center;
+  word-wrap: break-word;
 }
 
 .about .wrapper-about-description .show-more {
@@ -662,6 +663,10 @@ i.fa-times {
   .about .wrapper-about-description .wrapper-flex .about-img-description-wrapper:nth-of-type(4) img {
     width: 200px;
     height: auto;
+  }
+  .about .wrapper-about-description .about-description-height .about-description {
+    font-size: 20px;
+    word-wrap: break-word;
   }
 }
 

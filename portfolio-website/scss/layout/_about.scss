@@ -67,6 +67,7 @@
         letter-spacing: 2px;
         text-align: justify;
         text-align-last: center;
+        word-wrap: break-word;
       }
     }
 
@@ -178,6 +179,18 @@
           }
         }
       }
+
+      .about-description-height {
+
+        .about-description {
+          font-size: 20px;
+          word-wrap: break-word;
+          
+        }
+
+      }
+
+      
 
     }
 
