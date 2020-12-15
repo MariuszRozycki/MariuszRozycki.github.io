@@ -6,6 +6,8 @@
   display: inline-block;
   border-bottom: 3px solid transparent;
   outline-style: none;
+  cursor: pointer;
+  border-bottom: 3px solid inherit;
 
   &:hover {
     -webkit-transform: translateY(-8%);
@@ -75,4 +77,5 @@
   font-size: 18px;
   padding: 15px 30px;
   margin: 20px auto;
+  border-bottom: 3px solid #17DAA3;
 }

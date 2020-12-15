@@ -86,8 +86,8 @@
 }
 
 .wrapper-icon-js {
-  -webkit-transform: rotate(120deg) translate(15em);
-  transform: rotate(120deg) translate(15em);
+  -webkit-transform: rotate(120deg) translate(15em) rotate(-120deg);
+  transform: rotate(120deg) translate(15em) rotate(-120deg);
 }
 
 .wrapper-icon-react {
@@ -354,8 +354,8 @@
     }
 
     .wrapper-icon-js {
-      -webkit-transform: rotate(120deg) translate(9em);
-      transform: rotate(120deg) translate(9em);
+      -webkit-transform: rotate(120deg) translate(9em) rotate(-120deg);
+      transform: rotate(120deg) translate(9em) rotate(-120deg);
     }
 
     .wrapper-icon-react {
@@ -449,8 +449,8 @@
     }
 
     .wrapper-icon-js {
-      -webkit-transform: rotate(120deg) translate(6em);
-      transform: rotate(120deg) translate(6em);
+      -webkit-transform: rotate(120deg) translate(6em) rotate(-120deg);
+      transform: rotate(120deg) translate(6em) rotate(-120deg);
     }
 
     .wrapper-icon-react {
@@ -522,8 +522,8 @@
     }
 
     .wrapper-icon-js {
-      -webkit-transform: rotate(120deg) translate(5em);
-      transform: rotate(120deg) translate(5em);
+      -webkit-transform: rotate(120deg) translate(5em) rotate(-120deg);
+      transform: rotate(120deg) translate(5em) rotate(-120deg);
     }
 
     .wrapper-icon-react {

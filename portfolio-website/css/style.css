@@ -190,6 +190,8 @@ h3 {
   display: inline-block;
   border-bottom: 3px solid transparent;
   outline-style: none;
+  cursor: pointer;
+  border-bottom: 3px solid inherit;
 }
 
 .main-nav-btn:hover, .btn:hover, .show-more:hover, .hide-description:hover, .btn-form:hover {
@@ -246,6 +248,7 @@ h3 {
   font-size: 18px;
   padding: 15px 30px;
   margin: 20px auto;
+  border-bottom: 3px solid #17DAA3;
 }
 
 /* splash */
@@ -750,7 +753,7 @@ i.fa-times {
 }
 
 .wrapper-icon-js {
-  transform: rotate(120deg) translate(15em);
+  transform: rotate(120deg) translate(15em) rotate(-120deg);
 }
 
 .wrapper-icon-react {
@@ -968,7 +971,7 @@ i.fa-times {
     transform: rotate(60deg) translate(9em) rotate(-60deg);
   }
   .wrapper-all-icons .wrapper-icon-js {
-    transform: rotate(120deg) translate(9em);
+    transform: rotate(120deg) translate(9em) rotate(-120deg);
   }
   .wrapper-all-icons .wrapper-icon-react {
     transform: rotate(-180deg) translate(9em) rotate(180deg);
@@ -1046,7 +1049,7 @@ i.fa-times {
     transform: rotate(60deg) translate(6em) rotate(-60deg);
   }
   .wrapper-all-icons .wrapper-icon-js {
-    transform: rotate(120deg) translate(6em);
+    transform: rotate(120deg) translate(6em) rotate(-120deg);
   }
   .wrapper-all-icons .wrapper-icon-react {
     transform: rotate(-180deg) translate(6em) rotate(180deg);
@@ -1105,7 +1108,7 @@ i.fa-times {
     transform: rotate(60deg) translate(5em) rotate(-60deg);
   }
   .wrapper-all-icons .wrapper-icon-js {
-    transform: rotate(120deg) translate(5em);
+    transform: rotate(120deg) translate(5em) rotate(-120deg);
   }
   .wrapper-all-icons .wrapper-icon-react {
     transform: rotate(-180deg) translate(5em) rotate(180deg);
