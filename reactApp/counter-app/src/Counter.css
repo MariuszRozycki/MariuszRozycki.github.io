@@ -1,0 +1,31 @@
+.counter {
+  position: relative;
+  border: 1px solid darkblue;
+  padding: 30px;
+  width: 300px;
+  margin: 30px auto;
+}
+
+.value {
+  margin-left: 10px;
+  color: blue;
+}
+
+button {
+  margin-left: 20px;
+}
+
+.showClock {
+  display: inline-block;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 10px;
+  color: lightcoral;
+}
+
+.showClock:hover {
+  color: red;
+  text-decoration: underline;
+  cursor: pointer;
+}
