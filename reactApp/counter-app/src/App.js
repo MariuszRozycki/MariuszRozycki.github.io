@@ -1,6 +1,5 @@
 import './App.css';
 import Counter from './Counter';
-import ClassCounter from './Counter';
 
 function App() {
 

@@ -7,14 +7,15 @@ import ClockFunctional from './ClockFunctional';
 import Step from './Step';
 
 
-class ClassCounter extends Component {
+class Counter extends Component {
 
   constructor(props) {
     super(props);
 
     this.state = {
       counterValue: this.props.initValue,
-      showClock: true, 
+      showClock: false,
+      stepValue: this.props.inputStepValue,
     };
 
     this.changeValue = this.changeValue.bind(this); // w przypadku NIE uzycia funkcji strzalkowej
@@ -59,16 +60,24 @@ class ClassCounter extends Component {
     })
   }
 
+  inputStepValue = () => {
+    this.setState((prevState) => {
+      return({
+        
+      })
+    });
+  }
+
   render () {
     let clockElement = '';
     if(this.state.showClock) {
       // clockElement = <Clock
       // toggleClockMethod={this.toggleClock} />;
-      clockElement = <ClockFunctional
-      toggleClockMethod={this.toggleClock} />;
+      clockElement = <ClockFunctional toggleClockMethod={this.toggleClock} />;
     } else {
       clockElement = <span onClick={this.toggleClock} className="showClock">show clock</span>
     }
+
 
     return (
       <div className="counter">
@@ -76,11 +85,11 @@ class ClassCounter extends Component {
         <Display displayValue={this.state.counterValue} />
         <ButtonsPanel buttonMethod={this.changeValue} />
         {clockElement}
-        <Step />
+        <Step stepValue={this.inputStepValue} />
       </div>
     )
   }
  
 }
 
-export default ClassCounter;
+export default Counter;

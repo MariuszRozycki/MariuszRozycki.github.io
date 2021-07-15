@@ -11,100 +11,16 @@ class App extends Component {
     tasks: [
       {
         id: 0,
-        text: 'To find job',
+        text: '',
         date: '2021-08-15',
         important: false,
         active: true,
         finishDate: null
       },
-      {
-        id: 1,
-        text: 'To make something good',
-        date: '2021-07-15',
-        important: false,
-        active: true,
-        finishDate: null
-      },
-      {
-        id: 2,
-        text: 'To go to walk',
-        date: '2021-07-14',
-        important: false,
-        active: true,
-        finishDate: null
-      },
-      {
-        id: 3,
-        text: 'To go to walk',
-        date: '2021-07-14',
-        important: false,
-        active: true,
-        finishDate: null
-      },
-      {
-        id: 4,
-        text: 'To go to walk',
-        date: '2021-07-14',
-        important: false,
-        active: true,
-        finishDate: null
-      },
-      {
-        id: 5,
-        text: 'To go to walk',
-        date: '2021-07-14',
-        important: false,
-        active: true,
-        finishDate: null
-      },
-      {
-        id: 6,
-        text: 'To go to walk',
-        date: '2021-07-14',
-        important: false,
-        active: true,
-        finishDate: null
-      },
-      {
-        id: 7,
-        text: 'To go to walk',
-        date: '2021-07-14',
-        important: false,
-        active: true,
-        finishDate: null
-      },
-      {
-        id: 8,
-        text: 'To go to walk',
-        date: '2021-07-14',
-        important: false,
-        active: true,
-        finishDate: null
-      },
-      {
-        id: 9,
-        text: 'To go to walk',
-        date: '2021-07-14',
-        important: false,
-        active: true,
-        finishDate: null
-      },
-      {
-        id: 10,
-        text: 'To go to walk',
-        date: '2021-07-14',
-        important: false,
-        active: true,
-        finishDate: null
-      },
-      {
-        id: 11,
-        text: 'To go to walk',
-        date: '2021-07-14',
-        important: false,
-        active: true,
-        finishDate: null
-      },
+
+
+
+
     ]
   }
 
