@@ -579,7 +579,7 @@ i.fa-times {
   font-weight: 300;
   letter-spacing: 2px;
   text-align: justify;
-  text-align-last: center;
+  text-align-last: left;
   word-wrap: break-word;
 }
 
