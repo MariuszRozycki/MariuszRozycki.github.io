@@ -1,0 +1,123 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .wrapper {
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    color: white;
+    text-align: center;
+    transition: 0s;
+    visibility: hidden;
+  }
+
+  img {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    z-index: 9;
+  }
+
+  .text {
+    z-index: 10;
+    width: 100%;
+  }
+
+  @keyframes countDown {
+    0% {
+      visibility: hidden;
+    }
+
+    100% {
+      visibility: visible;
+    }
+  }
+
+  @keyframes fireworks {
+    0% {
+      visibility: hidden;
+    }
+
+    100% {
+      visibility: visible;
+    }
+  }
+
+  .animate10,
+  .animate9,
+  .animate8,
+  .animate7,
+  .animate6,
+  .animate5,
+  .animate4,
+  .animate3,
+  .animate2,
+  .animate1 {
+    animation-name: countDown;
+    animation-duration: 1s;
+  }
+
+  .animate9 {
+    animation-delay: 1s;
+  }
+
+  .animate8 {
+    animation-delay: 2s;
+  }
+
+  .animate7 {
+    animation-delay: 3s;
+  }
+
+  .animate6 {
+    animation-delay: 4s;
+  }
+
+  .animate5 {
+    animation-delay: 5s;
+  }
+
+  .animate4 {
+    animation-delay: 6s;
+  }
+
+  .animate3 {
+    animation-delay: 7s;
+  }
+
+  .animate2 {
+    animation-delay: 8s;
+  }
+
+  .animate1 {
+    animation-delay: 9s;
+  }
+
+  .animate0 {
+    animation-name: fireworks;
+    animation-delay: 10s;
+    animation-duration: 10s;
+  }
+
+  div p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+  }
