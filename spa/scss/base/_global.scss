@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
 body {
   font-family: $primary-font;
   color: $primary-text-color;
@@ -18,7 +23,8 @@ h6 {
 }
 
 h2 {
-  font-size: 42px;
+  font-size: 30px;
+  text-align: center;
 }
 
 h3 {
@@ -72,7 +78,7 @@ section {
   }
 
   section {
-    padding: 60px 0;
+    padding: 120px 0;
   }
 }
 

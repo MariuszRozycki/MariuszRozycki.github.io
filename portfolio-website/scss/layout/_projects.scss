@@ -1,225 +1,71 @@
 .projects {
 
-  h3 {
-    color: $color-cosmic-green;
-  }
-
-  h3.github-links {
-    padding-top: 96px;
-  }
-
-  background-color: #000;
-
-  ul {
-    
-    li {
-      list-style: none;
-      @include flex;
-      @include flex-align (flex-start, center);
-      margin: 30px auto;
-      flex-basis: 80%;
-    
-           
-
-      i {
-        margin-right: 60px;
-        font-size: 2em;
-        width: 10%;
-        color: $color-cosmic-green;
-      }
-
-      a {
-        display: block;
-        text-align: left;
-        color: $color-cosmic-green;
-        flex-basis: 100%;
-        font-size: 24px;
-        padding: 10px 30px;
-        border-radius: 20px;
-        background-color: #000;
-        border: 2px solid;
-        transition: .2s;
-        
-
-        &:hover {
-          background-color: $color-cosmic-green;
-          color: #000;
-          border: 2px solid $color-cosmic-green;
-          transform: translateY(-2px);
-          box-shadow: 0 0 50px $color-cosmic-green;
-        }
-      }
-    }
-  }
-
-  /* #projects animations */
-
-  @keyframes move-to-right-1 {
-    0% {
-      transform: translateX(0);
+    h3 {
+      color: $color-cosmic-green;
     }
 
-    50% {
-      transform: translateX(40px);
+    h3.github-links {
+      padding-top: 96px;
     }
 
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes move-to-right-2 {
-    0% {
-      transform: translateX(40px);
-    }
-
-    50% {
-      transform: translateX(0);
-    }
-
-    100% {
-      transform: translateX(40px);
-    }
-  }
-
-  .move-to-right-1 {
-    animation-name: move-to-right-1;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-  }
-
-  .move-to-right-2 {
-    animation-name: move-to-right-2;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-  }
-
-  @media all and (max-width: $medium) {
-    ul li i {
-      margin-right: 45px;
-    }
-
-    ul li a {
-      width: 80%;
-    }
-
-
-    @keyframes move-to-right-1 {
-      0% {
-        transform: translateX(0);
-      }
-
-      50% {
-        transform: translateX(30px);
-      }
-
-      100% {
-        transform: translateX(0);
-      }
-    }
-
-    @keyframes move-to-right-2 {
-      0% {
-        transform: translateX(30px);
-      }
-
-      50% {
-        transform: translateX(0);
-      }
-
-      100% {
-        transform: translateX(30px);
-      }
-    }
-  }
-
-  @media all and (max-width: $small) {
+    background-color: #000;
 
     ul {
-
+      
       li {
-
-        i {
-          display: none;
-        }
-
-        margin-left: 10px;
-        margin-right: 10px;
-
+        list-style: none;
+        @include flex;
+        @include flex-align (flex-start, center);
+        margin: 30px auto;
+        flex-basis: 80%;
+    
         a {
-          width: 100%;
-          height: auto;
-          padding: 10px 15px;
+          display: block;
+          text-align: left;
+          color: $color-cosmic-green;
+          flex-basis: 100%;
+          font-size: 24px;
+          padding: 10px 30px;
+          border-radius: 20px;
+          background-color: #000;
+          border: 2px solid;
+          transition: .2s;
+          
 
           &:hover {
-            transform: none;
+            background-color: $color-cosmic-green;
+            color: #000;
+            border: 2px solid $color-cosmic-green;
+            transform: translateY(-2px);
+            box-shadow: 0 0 50px $color-cosmic-green;
           }
         }
       }
     }
 
+    /* #projects animations */
 
-    @keyframes move-to-right-1 {
-      0% {
-        transform: translateX(0);
-      }
-
-      50% {
-        transform: translateX(20px);
-      }
-
-      100% {
-        transform: translateX(0);
+    @media all and (max-width: $medium) {
+      ul li a {
+        width: 80%;
       }
     }
 
-    @keyframes move-to-right-2 {
-      0% {
-        transform: translateX(20px);
-      }
+    @media all and (max-width: $small) {
 
-      50% {
-        transform: translateX(0);
-      }
+      ul {
 
-      100% {
-        transform: translateX(20px);
-      }
-    }
-  }
+        li {
+          a {
+            width: 100%;
+            height: auto;
+            padding: 10px 15px;
 
-  @media all and (max-width: $extra-small) {
-
-    ul {
-
-      li {
-
-        margin-left: 2px;
-        margin-right: 2px;
-
-        a {
-          width: 100%;
-          height: auto;
-          padding: 10px 15px;
+            &:hover {
+              transform: none;
+            }
+          }
         }
       }
     }
-  }
-
-  @media all and (max-width: $xx-small) {
-    ul {
-
-      li {
-
-        margin-left: 1px;
-        margin-right: 2px;
-
-        a {
-          width: 100%;
-          height: auto;
-          padding: 10px 15px;
-        }
-      }
-    }
-  }
 }
